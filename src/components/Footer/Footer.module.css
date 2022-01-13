@@ -1,0 +1,97 @@
+.footer {
+    position: relative;
+    height: auto;
+    min-height: 300px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 60px 30px 0;
+    background-color: #1f1e37;
+    color: #1f1e37;
+}
+
+.footer-logo {
+    background-image: url(../../assets/HS_logo_footer.png);
+    width: 78px;
+    height: 61px;
+    background-size: cover;
+}
+
+.mycontain {
+    display: block;
+    max-width: 1100px;
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+}
+
+.footer-links-wrap {
+    width: 150px;
+}
+
+.footer-links {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #fff;
+    text-decoration: none;
+}
+.footer-upper-wrap{
+    display: flex;
+    justify-content: space-between;;
+}
+.p-v50 {
+    padding-bottom: 50px;
+}
+.footer-cta-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.white {
+    display: block;
+    color: #fff;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.nav-btn {
+    margin-top: 20px;
+    max-width: 155px;
+    min-width: 110px;
+    padding: 5px 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 50px;
+    transition: all 350ms ease;
+    text-align: center;
+}
+
+.nav-btn:hover {
+    background-color: #fff;
+    color: #151429;
+}
+
+
+.small-caps {
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    opacity: .15;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+}
