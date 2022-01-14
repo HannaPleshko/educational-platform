@@ -1,0 +1,24 @@
+.gradient {
+    background-image: linear-gradient(211deg, #f3f3f3, hsla(0, 0%, 100%, 0) 20%);
+}
+
+.main {
+    position: relative;
+    padding: 125px 20px 40px;
+}
+
+.main_code {
+    background-image: url(../../assets/main_code.png);
+    width: 78px;
+    height: 61px;
+    background-size: cover;
+}
+
+.mycontain {
+    display: block;
+    max-width: 1100px;
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+}
