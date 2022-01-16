@@ -2,7 +2,7 @@ import header from './Header.module.css';
 
 const Header = () => {
     return (
-        <header>
+        <header className={header['nav-desktop-sticky']}>
             <nav className={header['nav-desktop']}>
                 <div className={header['nav-logo-link']}></div>
                 <div className={header['nav-links-center']}>

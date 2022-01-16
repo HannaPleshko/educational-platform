@@ -1,10 +1,10 @@
 .nav-desktop {
     position: sticky;
     top: 0;
-    z-index: 500;
+    right: 0;
+    z-index: 1500;
     display: flex;
-    height: 70px;
-    margin-top: 0;
+    height: 80px;
     padding-right: 30px;
     padding-left: 30px;
     justify-content: space-between;
@@ -13,8 +13,8 @@
 
 .nav-logo-link {
     background-image: url(../../assets/HS_logo_header.png);
-    width: 72px;
-    height: 61px;
+    width: 80px;
+    height: 79px;
     background-size: cover;
 }
 
@@ -32,7 +32,7 @@
     align-items: center;
     border-bottom: 2px solid transparent;
     color: #151429;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 20px;
     text-decoration: none;
 }
@@ -57,7 +57,7 @@
     border-color: #151429;
     background-color: transparent;
     color: #151429;
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 50px;
     transition: all 350ms ease;
     text-align: center;
