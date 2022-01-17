@@ -184,7 +184,7 @@ const Main = () => {
                         <div className={main["img_offer"]}></div>
                         <div className={main["block-tryfree"]}>
                             <h2 className={classNames(main["container-logo"], main["container-logo-tryfree"])}>Ready to make the leap?</h2>
-                            <div className=""> <a href="/" className={classNames(main["btn"], main['btn-tryfree'])}>Get started for free</a></div>
+                            <div className={classNames(main['btn-tryfree'])}> <a href="/" className={classNames(main["btn"], main['btn-tryfree'])}>Get started for free</a></div>
                         </div>
                     </div>
                 </div>
