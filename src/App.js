@@ -1,13 +1,19 @@
+import { Routes, Route } from 'react-router-dom'
+import GuestHome from './pages/GuestHome/GuestHome';
+import Registry from './pages/Registry/Registry';
+import NotFound from './components/NotFound/NotFound';
 import './App.css';
-// import Registry from "./pages/Registry/Registry";
-import GuestHome from "./pages/GuestHome/GuestHome";
 
 function App() {
     return (
-        <div className="App">
-           {/* <Registry></Registry> */}
-           <GuestHome></GuestHome>
-        </div>
+        <>
+            <Routes>
+                <Route path='/' element={<GuestHome />}></Route>
+                <Route path='/register' element={<Registry />}></Route>
+                <Route path='*' element={<NotFound />}></Route>
+            </Routes>
+        </>
+
     );
 }
 

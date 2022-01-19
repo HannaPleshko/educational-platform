@@ -1,0 +1,29 @@
+
+.logo_404 p {
+    background-image: url(./assets/logo_404.png);
+    width: 100px;
+    height: 110px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+}
+
+.container {
+    /* display: flex; */
+}
+
+
+.four_zero_four_bg {
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 500px;
+    background-size: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.link_404 {}
