@@ -10,23 +10,23 @@ const Header = () => {
     return (
         <header className={header['nav-desktop-sticky']}>
             <nav className={header['nav-desktop']}>
-                <div className={header['nav-logo-link']}></div>
+                <Link to={'/'}><div className={header['nav-logo-link']}></div></Link>
                 <div className={header['nav-links-center']}>
-                    <a href="/" className={header["nav-link"]}>
+                    <Link to={"*"} className={header["nav-link"]}>
                         <div className="nav-link-text">Why HS?</div>
-                    </a>
-                    <a href="/" className={header["nav-link"]}>
+                    </Link>
+                    <Link to={"*"} className={header["nav-link"]}>
                         <div className="nav-link-text">Courses</div>
-                    </a>
-                    <a href="/" className={header["nav-link"]}>
+                    </Link>
+                    <Link to={"*"} className={header["nav-link"]}>
                         <div className="nav-link-text">Literature</div>
-                    </a>
-                    <a href="/" className={header["nav-link"]}>
+                    </Link>
+                    <Link to={"*"} className={header["nav-link"]}>
                         <div className="nav-link-text">WorkSpace</div>
-                    </a>
-                    <a href="/" className={header["nav-link"]}>
+                    </Link>
+                    <Link to={"*"} className={header["nav-link"]}>
                         <div className="nav-link-text">Contacts</div>
-                    </a>
+                    </Link>
                 </div>
                 <div className={header["nav-links-right"]}>
                     <Link to={"*"} className={header["nav-link"]}>

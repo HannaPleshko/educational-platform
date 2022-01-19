@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 import main from './GuestHomeSection.module.css';
 
 const GuestHomeSection = () => {
@@ -12,7 +13,7 @@ const GuestHomeSection = () => {
                                 <h1 className={main["heading"]}>Start Your Programming Career Right Now!</h1>
                             </div>
                             <p className={main["hero-description-spacing"]}>HS is a programming school where we will teach you the knowledge that is in demand today.</p>
-                            <a href="/" className={main["btn"]}>Get started for free</a>
+                            <Link to={"*"} className={main["btn"]}>Get started for free</Link>
                         </div>
                         <div className={main["flex40col-home-hero"]}>
                             <div className={main["main_code"]}></div>
@@ -114,7 +115,7 @@ const GuestHomeSection = () => {
                             </div>
                         </div>
                         <div className={main["learn-container-btn-div"]}>
-                            <a href="/" className={classNames(main["learn-container-btn"])}>Get started for free</a>
+                            <Link to={"*"} className={classNames(main["learn-container-btn"])}>Get started for free</Link>
                         </div>
                     </div>
                 </div>
@@ -184,7 +185,7 @@ const GuestHomeSection = () => {
                         <div className={main["img_offer"]}></div>
                         <div className={main["block-tryfree"]}>
                             <h2 className={classNames(main["container-logo"], main["container-logo-tryfree"])}>Ready to make the leap?</h2>
-                            <div className={classNames(main['btn-tryfree'])}> <a href="/" className={classNames(main["btn"], main['btn-tryfree'])}>Get started for free</a></div>
+                            <div className={classNames(main['btn-tryfree'])}> <Link to={"*"} className={classNames(main["btn"], main['btn-tryfree'])}>Get started for free</Link></div>
                         </div>
                     </div>
                 </div>

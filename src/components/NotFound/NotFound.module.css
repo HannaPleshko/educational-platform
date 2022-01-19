@@ -1,23 +1,24 @@
+.container {
+    padding: 70px 50px 50px;
+}
 
-.logo_404 p {
+.logo_404 {
     background-image: url(./assets/logo_404.png);
-    width: 100px;
-    height: 110px;
+    width: 350px;
+    height: 150px;
     background-repeat: no-repeat;
     background-size: contain;
     display: block;
+    margin: auto;
 }
 
-.container {
-    /* display: flex; */
-}
 
 
 .four_zero_four_bg {
     background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
     background-repeat: no-repeat;
-    width: 50%;
-    height: 500px;
+    width: 40%;
+    height: 400px;
     background-size: cover;
     display: block;
     margin-left: auto;
@@ -26,4 +27,28 @@
 
 
 
-.link_404 {}
+.contant_box_404 h3 {
+    margin-top: 60px;
+    color: #151429;
+    font-size: 23px;
+    font-weight: 400;
+    /* letter-spacing: -.005em; */
+    text-align: center;
+}
+
+.contant_box_404 p {
+    /* margin-top: 5px; */
+    color: #151429;
+    font-size: 23px;
+    font-weight: 400;
+    /* letter-spacing: -.005em; */
+    text-align: center;
+}
+
+.link_404 {
+    margin-left: 5px;
+    color: #539CDA;
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: -.005em;
+}

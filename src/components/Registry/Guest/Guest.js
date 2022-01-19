@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import guest from './Guest.module.css';
 
 const Guest = () => {
@@ -18,7 +19,7 @@ const Guest = () => {
                             <p>I am a teacher, admin, principal, or guidance counselor.</p>
                         </div>
                     </div>
-                    <p className={guest["mycontain--login"]}>Already have an account?<a href="/">Login</a></p>
+                    <p className={guest["mycontain--login"]}>Already have an account?<Link to={"*"}>Login</Link></p>
                 </div>
             </div>
         </div>

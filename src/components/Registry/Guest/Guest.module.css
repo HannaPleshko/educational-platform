@@ -23,7 +23,7 @@
     color: #151429;
     font-size: 22px;
     font-weight: 400;
-    letter-spacing: -1.5px;
+    /* letter-spacing: -1.5px; */
     text-align: center;
     margin-bottom: 36px;
 }
@@ -83,7 +83,7 @@
 
 .mycontain--login {
     color: #151429;
-    /*font-size: 16px;*/
+    font-size: 20px;
     font-weight: 400;
     margin-top: 23px;
     display: flex;
@@ -93,7 +93,7 @@
 .mycontain--login a {
     /*display: block;*/
     color: #539CDA;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     margin-left: 5px;
 }
