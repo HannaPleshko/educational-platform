@@ -9,7 +9,7 @@
 }
 
 .main_code {
-    background-image: url(../../assets/main_code.png);
+    background-image: url(./assets/main_code.png);
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -100,35 +100,35 @@
 }
 
 .main_1 {
-    background-image: url(../../assets/main_1.png);
+    background-image: url(./assets/main_1.png);
     width: 78px;
     height: 78px;
     background-size: cover;
 }
 
 .main_2 {
-    background-image: url(../../assets/main_2.png);
+    background-image: url(./assets/main_2.png);
     width: 78px;
     height: 78px;
     background-size: cover;
 }
 
 .main_3 {
-    background-image: url(../../assets/main_3.png);
+    background-image: url(./assets/main_3.png);
     width: 78px;
     height: 78px;
     background-size: cover;
 }
 
 .main_4 {
-    background-image: url(../../assets/main_4.png);
+    background-image: url(./assets/main_4.png);
     width: 78px;
     height: 78px;
     background-size: cover;
 }
 
 .main_5 {
-    background-image: url(../../assets/main_5.png);
+    background-image: url(./assets/main_5.png);
     width: 78px;
     height: 78px;
     background-size: cover;
@@ -166,7 +166,7 @@
 }
 
 .img_salary {
-    background-image: url(../../assets/main_salary.png);
+    background-image: url(./assets/main_salary.png);
     background-repeat: no-repeat;
     width: 50%;
     height: 470px;
@@ -214,7 +214,7 @@
 
 
 .img_stages {
-    background-image: url(../../assets/img_stages.png);
+    background-image: url(./assets/img_stages.png);
     background-repeat: no-repeat;
     width: 100%;
     height: 270px;
@@ -248,7 +248,7 @@
 }
 
 .img_arrow {
-    background-image: url(../../assets/img_arrow.png);
+    background-image: url(./assets/img_arrow.png);
     background-repeat: no-repeat;
     width: 70px;
     height: 70px;
@@ -320,7 +320,7 @@
 }
 
 .img_whywe {
-    background-image: url(../../assets/main_question.png);
+    background-image: url(./assets/main_question.png);
     background-repeat: no-repeat;
     width: 44%;
     height: 300px;
@@ -329,7 +329,7 @@
 }
 
 .whywe-plus-arrow {
-    background-image: url(../../assets/img_arrow2.png);
+    background-image: url(./assets/img_arrow2.png);
     background-repeat: no-repeat;
     width: 6%;
     height: 40px;
@@ -401,7 +401,7 @@
 }
 
 .img_reviews {
-    background-image: url(../../assets/img_person.jpg);
+    background-image: url(./assets/img_person.jpg);
     width: 110px;
     height: 110px;
     background-size: cover;
@@ -443,7 +443,7 @@
 }
 
 .img_star1{
-    background-image: url(../../assets/img_star0.png);
+    background-image: url(./assets/img_star0.png);
     width: 100px;
     height: 30px;
     background-repeat: no-repeat;
@@ -452,7 +452,7 @@
     padding-bottom: 30px;
 }
 .img_star0{
-    background-image: url(../../assets/img_star1.png);
+    background-image: url(./assets/img_star1.png);
     width: 100px;
     height: 30px;
     background-repeat: no-repeat;
@@ -467,7 +467,7 @@
     padding: 0 20px 70px
 }
 .img_offer {
-    background-image: url(../../assets/img_offer.png);
+    background-image: url(./assets/img_offer.png);
     width: 50%;
     height: 550px;
     background-repeat: no-repeat;

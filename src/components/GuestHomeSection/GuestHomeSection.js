@@ -1,7 +1,7 @@
 import classNames from 'classnames';
-import main from './Main.module.css';
+import main from './GuestHomeSection.module.css';
 
-const Main = () => {
+const GuestHomeSection = () => {
     return (
         <main>
             <section className={classNames(main['gradient'], main['main'])}>
@@ -193,5 +193,5 @@ const Main = () => {
     )
 }
 
-export default Main
+export default GuestHomeSection
 

@@ -1,0 +1,99 @@
+.content {
+    padding-top: 100px;
+    margin-bottom: 70px;
+}
+
+.mycontain {
+    background-color: #FFF;
+    box-shadow: 0 2px 8px 3px rgb(0 0 0 / 5%);
+    width: 600px;
+    padding: 33px 70px;
+    margin: auto;
+    /*display: flex;*/
+}
+
+.mycontain-flex {
+    display: flex;
+    /* width: 450px; */
+    margin: auto;
+}
+
+.mycontain h2 {
+    display: block;
+    color: #151429;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -1.5px;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.block-student, .block-teacher {
+    background: #FFFFFF;
+    border: 1px solid #0370D3;
+    box-sizing: border-box;
+    border-radius: 2px;
+    padding: 0 15px;
+    width: 270px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /*justify-content: space-evenly;;*/
+}
+
+.img_log_as_student {
+    background-image: url(./assets/img_log_as_student.png);
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 23px auto 0;
+}
+
+.img_log_as_teacher {
+    background-image: url(./assets/img_log_as_teacher.png);
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 23px auto 0;
+}
+
+.block-student h3, .block-teacher h3 {
+    display: block;
+    color: #151429;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 23px;
+    /*letter-spacing: -1.5px;*/
+    /*text-align: center;*/
+}
+
+.block-student p, .block-teacher p {
+    display: block;
+    color: #151429;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 23px;
+    /*letter-spacing: -1.5px;*/
+    /*text-align: center;*/
+}
+
+.mycontain--login {
+    color: #151429;
+    /*font-size: 16px;*/
+    font-weight: 400;
+    margin-top: 23px;
+    display: flex;
+    justify-content: center;
+}
+
+.mycontain--login a {
+    /*display: block;*/
+    color: #539CDA;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 5px;
+}

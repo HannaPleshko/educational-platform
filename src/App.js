@@ -1,16 +1,12 @@
 import './App.css';
-// import Footer from './components/Footer/Footer';
-// import Header from './components/Header/Header'
-// import Main from './components/Main/Main';
-import Registry from "./pages/Registry/Registry";
+// import Registry from "./pages/Registry/Registry";
+import GuestHome from "./pages/GuestHome/GuestHome";
 
 function App() {
     return (
         <div className="App">
-            {/*<Header></Header>*/}
-            {/*<Main></Main>*/}
-            {/*<Footer></Footer>*/}
-            <Registry></Registry>
+           {/* <Registry></Registry> */}
+           <GuestHome></GuestHome>
         </div>
     );
 }

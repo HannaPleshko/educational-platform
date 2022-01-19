@@ -10,7 +10,7 @@
 }
 
 .footer-logo {
-    background-image: url(../../assets/HS_logo_footer.png);
+    background-image: url(./assets/HS_logo_footer.png);
     width: 78px;
     height: 61px;
     background-size: cover;
