@@ -1,6 +1,6 @@
 // import React from 'react';
 // import { Switch, Route, Redirect } from 'react-router-dom';
-// import { Auth } from './pages/Auth';
+// import { Registry } from './pages/Registry';
 // import { TaksPage } from './pages/TasksPage';
 // import { WorkWIthPage } from './pages/WorkWIthPage';
 // import { CreateTaskPage } from './pages/CreateTaskPage';

@@ -33,13 +33,14 @@
     border-bottom: 2px solid transparent;
     color: #151429;
     font-size: 20px;
-    line-height: 20px;
-    text-decoration: none;
+    line-height: 27px;
+    /*text-decoration: none;*/
 }
 
 .nav-link:hover {
-    text-decoration: underline;
-    text-decoration-color: #FA8080;
+    /*text-decoration: underline;*/
+    /*text-decoration-color: #FA8080;*/
+    border-bottom: 2px solid #FA8080;;
 }
 
 .download-arrow-link {}

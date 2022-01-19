@@ -2,7 +2,7 @@ import './App.css';
 // import Footer from './components/Footer/Footer';
 // import Header from './components/Header/Header'
 // import Main from './components/Main/Main';
-import Auth from "./pages/Auth/Auth";
+import Registry from "./pages/Registry/Registry";
 
 function App() {
     return (
@@ -10,7 +10,7 @@ function App() {
             {/*<Header></Header>*/}
             {/*<Main></Main>*/}
             {/*<Footer></Footer>*/}
-            <Auth></Auth>
+            <Registry></Registry>
         </div>
     );
 }

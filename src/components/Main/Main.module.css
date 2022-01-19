@@ -223,7 +223,7 @@
 
 .stages-container-logo {
     display: block;
-    margin-bottom: 0;
+    /*margin-bottom: 0;*/
     padding-bottom: 0;
     line-height: 70px;
     color: #151429;
@@ -280,7 +280,6 @@
 
 .learn-container-logo {
     display: block;
-    margin-bottom: 0;
     padding-bottom: 0;
     line-height: 70px;
     color: #151429;
