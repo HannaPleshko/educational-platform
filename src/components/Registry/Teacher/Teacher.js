@@ -1,7 +1,27 @@
-import teacher from './Teacher.module.css';
 import {Link} from "react-router-dom";
+import React, { useState } from "react";
+import axios from "axios";
+import teacher from './Teacher.module.css';
 
 const Teacher = () => {
+    const [form, setForm] = useState({
+        name: '',
+        surname: '',
+        email: '',
+        password: ''
+    });
+
+    const changeForm = (event) => {
+        setForm({ ...form, [event.target.name]: event.target.value });
+    };
+
+    const doRegistrationAsTeacher = async () => {
+        try {
+            const axiosData = await axios.post(`/`, { form })
+            console.log(axiosData)
+        } catch (e) {}
+    }
+
     return (
         <div className={teacher["teacher"]}>
             <div className={teacher["content"]}>
@@ -26,9 +46,7 @@ const Teacher = () => {
                         </div>
                     </div>
                     <div className={teacher["block-bottom"]}>
-                        <Link to={"*"}>
-                            <div className={teacher["btn-teacher"]}>Next</div>
-                        </Link>
+                        <Link className={teacher["btn-teacher"]} to={"*"} onClick={doRegistrationAsTeacher}>Next</Link>
                     </div>
                     <p className={teacher["mycontain--log"]}>Already have an account?
                         <Link to={"/login"} className={teacher["reg-link"]}>Log In</Link>
