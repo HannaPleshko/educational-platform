@@ -6,94 +6,89 @@
 .mycontain {
     background-color: #FFF;
     box-shadow: 0 2px 8px 3px rgb(0 0 0 / 5%);
-    width: 460px;
+    width: 520px;
     padding: 33px 70px;
     margin: auto;
-    /*display: flex;*/
+    border-radius: 25px
 }
 
-.mycontain-flex {
-    display: flex;
-    width: 450px;
-    margin: auto;
-}
-
-.mycontain h2 {
+.block-logo-student h2 {
     display: block;
     color: #151429;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 400;
-    letter-spacing: -1.5px;
     text-align: center;
-    margin-bottom: 36px;
+    margin-bottom: 20px;
 }
 
-.block-student, .block-teacher {
-    background: #FFFFFF;
-    border: 1px solid #0370D3;
-    box-sizing: border-box;
-    border-radius: 2px;
-    padding: 0 15px;
-    width: 200px;
-    height: 260px;
-    margin: 0 auto;
+.block-student {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    /*justify-content: space-evenly;;*/
+    /*height: 160px;*/
+    justify-content: space-between;
+
 }
 
-.img_log_as_student {
-    background-image: url(../../assets/img_log_as_student.png);
-    width: 76px;
-    height: 76px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 27px auto 0;
-}
-
-.img_log_as_teacher {
-    background-image: url(../../assets/img_log_as_teacher.png);
-    width: 76px;
-    height: 76px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 27px auto 0;
-}
-
-.block-student h3, .block-teacher h3 {
+.block-student p, .block-pwd p {
     display: block;
     color: #151429;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
-    margin-top: 27px;
-    /*letter-spacing: -1.5px;*/
-    /*text-align: center;*/
 }
 
-.block-student p, .block-teacher p {
-    display: block;
-    color: #151429;
-    font-size: 11px;
-    font-weight: 400;
-    margin-top: 27px;
-    /*letter-spacing: -1.5px;*/
-    /*text-align: center;*/
+.block-student input, .block-pwd input {
+    outline: none;
+    border: solid 1px #A7ABAE;
+    border-radius: 10px;
+    height: 44px;
+    width: 100%;
 }
 
-.mycontain--login {
-    color: #151429;
-    /*font-size: 16px;*/
-    font-weight: 400;
-    margin-top: 27px;
+.block-bottom {
+    margin: 20px 0 30px;
     display: flex;
-    justify-content: center;
+    justify-content: right;
 }
 
-.mycontain--login a {
-    /*display: block;*/
+.student--forgotpwd {
+    display: block;
+    color: #151429;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.forgotpwd-link, .reg-link {
     color: #539CDA;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     margin-left: 5px;
+}
+
+.mycontain--log {
+    display: block;
+    color: #151429;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.btn-student {
+    min-width: 130px;
+    border-radius: 50px;
+    background-color: #02238f;
+    transition: all 350ms ease;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.btn-student:hover {
+    background-color: #193eb8;
 }

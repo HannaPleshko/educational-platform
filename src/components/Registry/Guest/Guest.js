@@ -9,14 +9,14 @@ const Guest = () => {
                     <h2>Which one describes you?</h2>
                     <div className={guest["mycontain-flex"]}>
                         <div className={guest["block-student"]}>
-                            <Link to={'*'}>
+                            <Link to={'/register/student'}>
                                 <div className={guest["img_log_as_student"]}></div>
                                 <h3>Student</h3>
                                 <p>I am a student, class participant, etc.</p>
                             </Link>
                         </div>
                         <div className={guest["block-teacher"]}>
-                            <Link to={'*'}>
+                            <Link to={'/register/teacher'}>
                                 <div className={guest["img_log_as_teacher"]}></div>
                                 <h3>Teacher</h3>
                                 <p>I am a teacher, admin, principal, or guidance counselor.</p>

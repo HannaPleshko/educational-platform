@@ -24,7 +24,7 @@
 .block-login {
     display: flex;
     flex-direction: column;
-    height: 160px;
+    /*height: 160px;*/
     justify-content: space-between;
 
 }
@@ -45,7 +45,7 @@
 }
 
 .block-bottom {
-    margin: 20px 0 30px;
+    margin: 30px 0 30px;
     display: flex;
     justify-content: space-between;
 }
