@@ -1,0 +1,92 @@
+.content {
+    padding-top: 100px;
+    margin-bottom: 70px;
+}
+
+.mycontain {
+    background-color: #FFF;
+    box-shadow: 0 2px 8px 3px rgb(0 0 0 / 5%);
+    width: 520px;
+    padding: 33px 70px;
+    margin: auto;
+    border-radius: 25px
+}
+
+.block-logo-login h2 {
+    display: block;
+    color: #151429;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.block-login {
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+    justify-content: space-between;
+
+}
+
+.block-login p, .block-pwd p {
+    display: block;
+    color: #151429;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.block-login input, .block-pwd input {
+    outline: none;
+    border: solid 1px #A7ABAE;
+    border-radius: 10px;
+    height: 44px;
+    width: 100%;
+}
+
+.block-bottom {
+    margin: 20px 0 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mycontain--login {
+    display: block;
+    color: #151429;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.mycontain--login-link, .mycontain--reg-link {
+    color: #539CDA;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.mycontain--reg {
+    display: block;
+    color: #151429;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.btn-login {
+    min-width: 130px;
+    border-radius: 50px;
+    background-color: #02238f;
+    transition: all 350ms ease;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.btn-login:hover {
+background-color: #193eb8;
+}

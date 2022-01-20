@@ -1,7 +1,7 @@
 import Header from "../../components/Header/Header";
 import Guest from '../../components/Registry/Guest/Guest';
 
-const Registry = () => {
+const RegistrationPage = () => {
     return (
         <div>
             <Header></Header>
@@ -10,5 +10,5 @@ const Registry = () => {
     )
 }
 
-export default Registry
+export default RegistrationPage
 

@@ -1,14 +1,37 @@
-// import { Switch, Route } from 'react-router-dom'
-// import GuestHome from './pages/GuestHome/GuestHome'
-// import Registry from './pages/Registry/Registry'
-
-// export const useRoutes = () => {
-//   return (
-//     <main>
+// import React from 'react';
+// import { Switch, Route, Redirect } from 'react-router-dom';
+// import { RegistrationPage } from './pages/RegistrationPage';
+// import { TaksPage } from './pages/TasksPage';
+// import { WorkWIthPage } from './pages/WorkWIthPage';
+// import { CreateTaskPage } from './pages/CreateTaskPage';
+//
+// export const useRoutes = (isAuthenticated) => {
+//   if (isAuthenticated) {
+//     return (
 //       <Switch>
-//         <Route exact path='/' component={GuestHome} />
-//         <Route path='/register' component={Registry} />
+//         <Route path="/tasks" exact>
+//           <TaksPage />
+//         </Route>
+//         <Route path="/tasks/:id" exact>
+//           <WorkWIthPage />
+//         </Route>
+//         <Route path="/createtask" exact>
+//           <CreateTaskPage />
+//         </Route>
+//         <Redirect to="/tasks" />
 //       </Switch>
-//     </main>
-//   )
-// }
+//     );
+//   }
+//
+//   return (
+//     <Switch>
+//       <Route path="/auth/login" exact>
+//         <LoginPage />
+//       </Route>
+//       <Route path="/auth/register" exact>
+//         <RegisterPage />
+//       </Route>
+//       <Redirect to="/auth/login" />
+//     </Switch>
+//   );
+// };

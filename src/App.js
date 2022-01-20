@@ -1,7 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
-import GuestHome from './pages/GuestHome/GuestHome';
-import Registry from './pages/Registry/Registry';
-import NotFound from './components/NotFound/NotFound';
+import GuestHome from './pages/GuestHomePage/GuestHomePage';
+import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+import LoginPage from "./pages/LoginPage/LoginPage";
 import './App.css';
 
 function App() {
@@ -9,8 +10,9 @@ function App() {
         <>
             <Routes>
                 <Route path='/' element={<GuestHome />}></Route>
-                <Route path='/register' element={<Registry />}></Route>
-                <Route path='*' element={<NotFound />}></Route>
+                <Route path='/register' element={<RegistrationPage />}></Route>
+                <Route path='/login' element={<LoginPage />}></Route>
+                <Route path='*' element={<NotFoundPage />}></Route>
             </Routes>
         </>
 

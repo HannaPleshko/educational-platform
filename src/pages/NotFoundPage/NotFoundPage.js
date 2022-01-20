@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import notFound from './NotFound.module.css';
+import notFound from './NotFoundPage.module.css';
 
-const NotFound = () => {
+const NotFoundPage = () => {
 
     return (
         <>
@@ -22,4 +22,4 @@ const NotFound = () => {
     )
 }
 
-export default NotFound
+export default NotFoundPage
