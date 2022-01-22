@@ -8,7 +8,8 @@ const Student = () => {
         name: '',
         surname: '',
         email: '',
-        password: ''
+        password: '',
+        role: 1 // 1 - student, 2 - teacher, 0 - admin
     });
 
     const changeForm = (event) => {
@@ -17,8 +18,8 @@ const Student = () => {
 
     const doRegistrationAsStudent = async () => {
         try {
-            // const axiosData = await axios.post('/api/register', { form })
-            // console.log(axiosData)
+            console.log(form);
+            const axiosData = await axios.post('/api/register', form)
         } catch (e) {}
     }
 

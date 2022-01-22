@@ -1,7 +1,24 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import axios from "axios";
 import login from './Login.module.css';
 
 const Login = () => {
+    const [form, setForm] = useState({
+        email: '',
+        password: '',
+    });
+
+    const changeForm = (event) => {
+        setForm({ ...form, [event.target.name]: event.target.value });
+    };
+
+    const doAuthorization = async () => {
+        try {
+            const axiosData = await axios.post('/api/auth', form)
+        } catch (e) { }
+    }
+
     return (
         <div className={login["login"]}>
             <div className={login["content"]}>
@@ -10,18 +27,18 @@ const Login = () => {
                     <div className={login["block-login"]}>
                         <div className={login["block-email"]}>
                             <p>Email</p>
-                            <input type='text'/>
+                            <input name='email' onChange={changeForm} type='text' />
                         </div>
                         <div className={login["block-pwd"]}>
                             <p>Password</p>
-                            <input type='text'/>
+                            <input name='password' onChange={changeForm} type='text' />
                         </div>
                     </div>
                     <div className={login["block-bottom"]}>
                         <p className={login["mycontain--login"]}>Forgot password?
                             <Link to={"*"} className={login["mycontain--login-link"]}>Click Here</Link>
                         </p>
-                        <Link to={'*'} className={login["btn-login"]}>Log In</Link>
+                        <Link onClick={doAuthorization} to={'*'} className={login["btn-login"]}>Log In</Link>
                     </div>
                     <p className={login["mycontain--reg"]}>Don't have an account?<Link to={"/register"} className={login["mycontain--reg-link"]}>Register</Link>
                     </p>
