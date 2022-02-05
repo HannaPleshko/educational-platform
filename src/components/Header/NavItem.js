@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import header from './css/Header.module.css';
 
 const NavItem = ({ navTitle }) => {
-console.log(navTitle);
     return (
         <Link to={'*'} className={header['nav-link']}>
             <div className="nav-link-text">{navTitle}</div>

@@ -18,9 +18,8 @@ const Student = () => {
 
     const doRegistrationAsStudent = async () => {
         try {
-            console.log(form);
             const axiosData = await axios.post('/api/register', form)
-        } catch (e) {}
+        } catch (e) { }
     }
 
     return (
@@ -31,19 +30,19 @@ const Student = () => {
                     <div className={student["block-student"]}>
                         <div className={student["block-email"]}>
                             <p>Name</p>
-                            <input name="name" onChange={changeForm} type='text'/>
+                            <input name="name" onChange={changeForm} type='text' />
                         </div>
                         <div className={student["block-email"]}>
                             <p>Surname</p>
-                            <input name="surname" onChange={changeForm} type='text'/>
+                            <input name="surname" onChange={changeForm} type='text' />
                         </div>
                         <div className={student["block-email"]}>
                             <p>Email</p>
-                            <input name="email" onChange={changeForm} type='text'/>
+                            <input name="email" onChange={changeForm} type='text' />
                         </div>
                         <div className={student["block-pwd"]}>
                             <p>Password</p>
-                            <input name="password" onChange={changeForm} type='text'/>
+                            <input name="password" onChange={changeForm} type='text' />
                         </div>
                     </div>
                     <div className={student["block-bottom"]}>
