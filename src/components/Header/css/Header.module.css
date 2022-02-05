@@ -27,13 +27,15 @@
 
 .nav-link {
     text-decoration: none;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     margin-right: 2vw;
     align-items: center;
     border-bottom: 2px solid transparent;
     color: #151429;
     font-size: 18px;
     line-height: 27px;
+    margin-top: auto;
+    margin-bottom: auto;
     /*text-decoration: none;*/
 }
 

@@ -1,9 +1,12 @@
+import React, { useState, useContext } from "react";
 import { Link } from 'react-router-dom';
-import React, { useState } from "react";
 import axios from "axios";
 import login from './Login.module.css';
+import {AuthContext} from '../../context/AuthContext'
 
 const Login = () => {
+    const auth = useContext(AuthContext);
+
     const [form, setForm] = useState({
         email: '',
         password: '',
@@ -16,6 +19,7 @@ const Login = () => {
     const doAuthorization = async () => {
         try {
             const axiosData = await axios.post('/api/auth', form)
+            auth.login(axiosData.data.token);
         } catch (e) {
         }
     }
@@ -39,7 +43,7 @@ const Login = () => {
                         <p className={login["mycontain--login"]}>Forgot password?
                             <Link to={"*"} className={login["mycontain--login-link"]}>Click Here</Link>
                         </p>
-                        <Link onClick={doAuthorization} to={'/student-home'} className={login["btn-login"]}>Log In</Link>
+                        <Link onClick={doAuthorization} to={'/'} className={login["btn-login"]}>Log In</Link>
                     </div>
                     <p className={login["mycontain--reg"]}>Don't have an account?<Link to={"/register"} className={login["mycontain--reg-link"]}>Register</Link>
                     </p>

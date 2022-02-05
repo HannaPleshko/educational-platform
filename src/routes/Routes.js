@@ -14,12 +14,7 @@ export const RoutesTest = (isAuthenticated) => {
         return (
             <>
                 <Routes>
-                    <Route path="/" element={<GuestHome />}></Route>
-                    <Route path="/login" element={<LoginPage />}></Route>
-                    <Route path="/register" element={<RegistrationPage />}></Route>
-                    <Route path="/register/student" element={<RegistrationStudentPage />}></Route>
-                    <Route path="/register/teacher" element={<RegistrationTeacherPage />}></Route>
-                    <Route path="/student-home" element={<StudentHomePage />}></Route>
+                    <Route path="/" element={<StudentHomePage />}></Route>
                     <Route path="/course" element={<SingleCoursePage />}></Route>
                     <Route path="*" element={<NotFoundPage />}></Route>
                 </Routes>
