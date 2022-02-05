@@ -18,6 +18,7 @@
     "eject": "react-scripts eject",
     "prettier": "prettier --write \"**/*.js\""
   },
+  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": [
       "react-app",
