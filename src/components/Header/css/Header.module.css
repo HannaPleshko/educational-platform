@@ -12,7 +12,7 @@
 }
 
 .nav-logo-link {
-    background-image: url(./assets/HS_logo_header.png);
+    background-image: url(../assets/HS_logo_header.png);
     width: 80px;
     height: 79px;
     background-size: cover;

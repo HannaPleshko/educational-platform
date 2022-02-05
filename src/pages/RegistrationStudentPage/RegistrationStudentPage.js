@@ -2,9 +2,11 @@ import Header from '../../components/Header/Header';
 import Student from '../../components/Registry/Student/Student';
 
 const RegistrationStudentPage = () => {
+  let setTitle = ['Why HS?','Courses','Literature','WorkSpace','Contacts']
+
   return (
     <div>
-      <Header></Header>
+      <Header setTitle={setTitle}></Header>
       <Student></Student>
     </div>
   );

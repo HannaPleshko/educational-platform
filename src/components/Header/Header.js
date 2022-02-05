@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import header from './Header.module.css';
+import header from './css/Header.module.css';
+import NavList from './NavList';
 
-const Header = () => {
+const Header = ({ setTitle }) => {
   const doRegistration = () => {};
 
   return (
@@ -10,23 +11,9 @@ const Header = () => {
         <Link to={'/'}>
           <div className={header['nav-logo-link']}></div>
         </Link>
-        <div className={header['nav-links-center']}>
-          <Link to={'*'} className={header['nav-link']}>
-            <div className="nav-link-text">Why HS?</div>
-          </Link>
-          <Link to={'*'} className={header['nav-link']}>
-            <div className="nav-link-text">Courses</div>
-          </Link>
-          <Link to={'*'} className={header['nav-link']}>
-            <div className="nav-link-text">Literature</div>
-          </Link>
-          <Link to={'*'} className={header['nav-link']}>
-            <div className="nav-link-text">WorkSpace</div>
-          </Link>
-          <Link to={'*'} className={header['nav-link']}>
-            <div className="nav-link-text">Contacts</div>
-          </Link>
-        </div>
+
+        {( <NavList setTitle={setTitle} />)}
+
         <div className={header['nav-links-right']}>
           <Link to={'/login'} className={header['nav-link']}>
             <div className={header['nav-link-text']}>Login</div>

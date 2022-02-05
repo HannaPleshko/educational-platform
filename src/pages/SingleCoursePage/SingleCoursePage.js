@@ -4,9 +4,11 @@ import Header from '../../components/Header/Header';
 import SingleCourse from '../../components/SingleCourse/SingleCourse';
 
 const SingleCoursePage = () => {
+  let setTitle = ['Why HS?','Courses','Literature','WorkSpace','Contacts']
+
   return (
     <div>
-      <Header></Header>
+      <Header setTitle={setTitle}></Header>
       <SingleCourse></SingleCourse>
       <Footer></Footer>
     </div>

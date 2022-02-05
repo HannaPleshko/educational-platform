@@ -5,9 +5,11 @@ import Header from '../../components/Header/Header';
 import studentHomePage from './StudentHomePage.module.css';
 
 const StudentHomePage = () => {
+  let setTitle = ['Why HS?','Courses','Literature','WorkSpace','Contacts']
+
   return (
     <div className={studentHomePage['student-home']}>
-      <Header></Header>
+      <Header setTitle={setTitle}></Header>
       <div className={studentHomePage['main-information-navagate']}>
         <div className={studentHomePage['left-nav']}>
           <Link to={'*'}>
