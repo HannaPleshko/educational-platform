@@ -1,14 +1,13 @@
-import Header from "../../components/Header/Header";
-import Login from "../../components/Login/Login";
+import Header from '../../components/Header/Header';
+import Login from '../../components/Login/Login';
 
 const LoginPage = () => {
-    return (
-        <div>
-            <Header></Header>
-            <Login></Login>
-        </div>
-    )
-}
+  return (
+    <div>
+      <Header></Header>
+      <Login></Login>
+    </div>
+  );
+};
 
-export default LoginPage
-
+export default LoginPage;

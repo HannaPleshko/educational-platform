@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier": "prettier --write \"**/*.js\""
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +39,7 @@
   "devDependencies": {
     "axios": "^0.25.0",
     "classnames": "^2.3.1",
+    "prettier": "^2.5.1",
     "react-router-dom": "^6.2.1"
   }
 }

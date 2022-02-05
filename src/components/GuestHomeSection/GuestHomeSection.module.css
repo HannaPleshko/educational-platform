@@ -154,7 +154,7 @@
 .head-section__reason-title {
     font: var(--font-100);
     color: #151429;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     margin-left: 15px;
 }
@@ -201,7 +201,7 @@
     max-width: 450px;
     margin: 20px 0 20px 0;
     color: #151429;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: -.005em;
 }
@@ -343,7 +343,7 @@
 .whywe-plus p {
     margin-left: 25px;
     color: #151429;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: -.005em;
     display: flex;
@@ -352,7 +352,7 @@
 
 .container-whywe--p1 {
     color: #151429;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: -.005em;
     border-left: 1px solid #d1cccc;
@@ -362,7 +362,7 @@
 
 .container-whywe-p2 {
     color: #151429;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: -.005em;
 }
@@ -434,7 +434,7 @@
 
 .container-reviews--p2 {
     color: #151429;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: -.005em;
     text-align: center;
