@@ -19,7 +19,7 @@ const Login = () => {
     const doAuthorization = async () => {
         try {
             const axiosData = await axios.post('/api/auth', form)
-            auth.login(axiosData.data.token);
+            if (axiosData.headers.authorization.split(' ')[0] === 'Bearer') auth.login(axiosData.headers.authorization.split(' ')[1]);
         } catch (e) {
         }
     }

@@ -1,0 +1,81 @@
+.spinner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+}
+.spinner .blob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid #151429;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+.spinner .blob.top {
+    top: 0;
+    animation: blob-top 1s infinite ease-in;
+}
+.spinner .blob.bottom {
+    top: 100%;
+    animation: blob-bottom 1s infinite ease-in;
+}
+.spinner .blob.left {
+    left: 0;
+    animation: blob-left 1s infinite ease-in;
+}
+.spinner .move-blob {
+    background: #151429;
+    top: 0;
+    animation: blob-spinner-mover 1s infinite ease-in;
+}
+@keyframes blob-bottom {
+    25%, 50%, 75% {
+        top: 50%;
+        left: 100%;
+   }
+    100% {
+        top: 0;
+        left: 50%;
+   }
+}
+@keyframes blob-left {
+    25% {
+        top: 50%;
+        left: 0;
+   }
+    50%, 100% {
+        top: 100%;
+        left: 50%;
+   }
+}
+@keyframes blob-top {
+    50% {
+        top: 0;
+        left: 50%;
+   }
+    75%, 100% {
+        top: 50%;
+        left: 0;
+   }
+}
+@keyframes blob-spinner-mover {
+    0%, 100% {
+        top: 0;
+        left: 50%;
+   }
+    25% {
+        top: 50%;
+        left: 100%;
+   }
+    50% {
+        top: 100%;
+        left: 50%;
+   }
+    75% {
+        top: 50%;
+        left: 0;
+   }
+}

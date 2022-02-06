@@ -7,6 +7,7 @@ import RegistrationStudentPage from '../pages/RegistrationStudentPage/Registrati
 import RegistrationTeacherPage from '../pages/RegistrationTeacherPage/RegistrationTeacherPage';
 import StudentHomePage from '../pages/StudentHomePage/StudentHomePage';
 import SingleCoursePage from '../pages/SingleCoursePage/SingleCoursePage';
+import { Loader } from '../components/Loader/Loader';
 
 
 export const RoutesTest = (isAuthenticated) => {
@@ -29,7 +30,8 @@ export const RoutesTest = (isAuthenticated) => {
                 <Route path="/register" element={<RegistrationPage />}></Route>
                 <Route path="/register/student" element={<RegistrationStudentPage />}></Route>
                 <Route path="/register/teacher" element={<RegistrationTeacherPage />}></Route>
-                <Route path="*" element={<NotFoundPage />}></Route>
+                <Route  path="*" element={<NotFoundPage />}></Route>
+                <Route  path="/loader" element={<Loader />}></Route>
             </Routes>
         </>
     );

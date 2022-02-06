@@ -31,7 +31,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className={footer['footer-cta-wrap']}>
-            <h3 className={footer['white']}>Stay focused on coding.</h3>
+            <p className={footer['white']}>Stay focused on coding.</p>
             <Link to={'*'} className={footer['nav-btn']}>
               Get started for free
             </Link>
