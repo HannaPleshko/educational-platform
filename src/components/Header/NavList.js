@@ -5,7 +5,7 @@ const NavList = ({ setTitle }) => {
     return (
         <div className={header['nav-links-center']}>
             {setTitle.map((item) => (
-                <NavItem navTitle={item} {...item} />
+                <NavItem key={item.id} title={item.title} {...item} />
             ))}
         </div>
 

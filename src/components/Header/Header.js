@@ -10,6 +10,7 @@ const Header = ({ setTitle }) => {
 
 
   const doRegistration = () => { };
+  
   const doLogout = () => {
     auth.logout();
   };

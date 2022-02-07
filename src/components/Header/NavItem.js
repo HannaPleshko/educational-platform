@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import header from './css/Header.module.css';
 
-const NavItem = ({ navTitle }) => {
+const NavItem = ({ id, title }) => {
     return (
         <Link to={'*'} className={header['nav-link']}>
-            <div className="nav-link-text">{navTitle}</div>
+            <div id={id} className="nav-link-text">{title}</div>
         </Link>
     );
 };

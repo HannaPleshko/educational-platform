@@ -1,10 +1,12 @@
 import React, { useState, useContext } from "react";
 import { Link } from 'react-router-dom';
-import axios from "axios";
 import login from './Login.module.css';
-import {AuthContext} from '../../context/AuthContext'
+import { useHttp } from "../../hooks/http.hook";
+import { Loader } from "../Loader/Loader";
+import { AuthContext } from "../../context/AuthContext"
 
 const Login = () => {
+    const { request, loading } = useHttp();
     const auth = useContext(AuthContext);
 
     const [form, setForm] = useState({
@@ -13,16 +15,20 @@ const Login = () => {
     });
 
     const changeForm = (event) => {
-        setForm({...form, [event.target.name]: event.target.value});
+        setForm({ ...form, [event.target.name]: event.target.value });
     };
 
     const doAuthorization = async () => {
         try {
-            const axiosData = await axios.post('/api/auth', form)
-            if (axiosData.headers.authorization.split(' ')[0] === 'Bearer') auth.login(axiosData.headers.authorization.split(' ')[1]);
+            const fetched = await request('/api/auth', 'POST', form);
+            auth.login('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjEsImlhdCI6MTY0NDE3OTQxNX0.Ip2I0faO4gt22JsYlV4NnnRRYZrjKvfB6RERxyv_BKk');
         } catch (e) {
         }
     }
+
+    // if (loading) {
+    //     return <Loader />
+    // }
 
     return (
         <div className={login["login"]}>
@@ -43,7 +49,7 @@ const Login = () => {
                         <p className={login["mycontain--login"]}>Forgot password?
                             <Link to={"*"} className={login["mycontain--login-link"]}>Click Here</Link>
                         </p>
-                        <Link onClick={doAuthorization} to={'/'} className={login["btn-login"]}>Log In</Link>
+                        <Link onClick={doAuthorization} to={'/home'} className={login["btn-login"]}>Log In</Link>
                     </div>
                     <p className={login["mycontain--reg"]}>Don't have an account?<Link to={"/register"} className={login["mycontain--reg-link"]}>Register</Link>
                     </p>
