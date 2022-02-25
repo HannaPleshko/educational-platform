@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link } from 'react-router-dom';
 import login from './Login.module.css';
 import { useHttp } from "../../hooks/http.hook";
-import { Loader } from "../Loader/Loader";
+// import { Loader } from "../Loader/Loader";
 import { AuthContext } from "../../context/AuthContext"
 
 const Login = () => {
@@ -21,7 +21,6 @@ const Login = () => {
     const doAuthorization = async () => {
         try {
             const fetched = await request('/api/auth', 'POST', form);
-            auth.login('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjEsImlhdCI6MTY0NDE3OTQxNX0.Ip2I0faO4gt22JsYlV4NnnRRYZrjKvfB6RERxyv_BKk');
         } catch (e) {
         }
     }

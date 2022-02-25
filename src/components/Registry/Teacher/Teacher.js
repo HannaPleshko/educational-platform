@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
-import teacher from './Teacher.module.css';
+import teacher from '../css/Teacher.module.css';
 
 const Teacher = () => {
     const [form, setForm] = useState({

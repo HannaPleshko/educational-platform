@@ -7,7 +7,7 @@ import RegistrationStudentPage from '../pages/RegistrationStudentPage/Registrati
 import RegistrationTeacherPage from '../pages/RegistrationTeacherPage/RegistrationTeacherPage';
 import StudentHomePage from '../pages/StudentHomePage/StudentHomePage';
 import SingleCoursePage from '../pages/SingleCoursePage/SingleCoursePage';
-import { Loader } from '../components/Loader/Loader';
+// import { Loader } from '../components/Loader/Loader';
 
 
 export const RoutesTest = (isAuthenticated) => {
