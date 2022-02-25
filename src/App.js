@@ -19,11 +19,10 @@ function App() {
       }}
     >
       <div>
-        <h1>{routes}</h1>
+       {routes}
       </div>
     </AuthContext.Provider>
   );
-
 }
 
 export default App;

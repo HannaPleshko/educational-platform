@@ -25,6 +25,7 @@ const SingleCoursePage = () => {
       id: Math.random() * 1000,
       title: 'Contacts'
     }]
+
   return (
     <div>
       <Header setTitle={setTitle}></Header>

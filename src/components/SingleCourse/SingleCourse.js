@@ -1,7 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import singleCourse from './SingleCourse.module.css';
 
 const SingleCourse = () => {
+    const {_id} = useParams()
+    console.log(_id);
+
 
     return (
         <div className={singleCourse['course-wrapper']}>
@@ -9,7 +12,7 @@ const SingleCourse = () => {
                 <div className={singleCourse['course-main-info']}>
                     <div className={singleCourse['course-main-info-width']}>
                         <p>Course</p>
-                        <div className={singleCourse['course-name']}>JavaScript</div>
+                        <div className={singleCourse['course-name']}>{_id}</div>
                         <div className={singleCourse['course-count-student']}>65 students</div>
                     </div>
                 </div>

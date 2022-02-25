@@ -48,7 +48,7 @@ const Login = () => {
                         <p className={login["mycontain--login"]}>Forgot password?
                             <Link to={"*"} className={login["mycontain--login-link"]}>Click Here</Link>
                         </p>
-                        <Link onClick={doAuthorization} to={'/home'} className={login["btn-login"]}>Log In</Link>
+                        <Link onClick={doAuthorization} to={'/course'} className={login["btn-login"]}>Log In</Link>
                     </div>
                     <p className={login["mycontain--reg"]}>Don't have an account?<Link to={"/register"} className={login["mycontain--reg-link"]}>Register</Link>
                     </p>
