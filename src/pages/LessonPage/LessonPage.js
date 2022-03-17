@@ -1,9 +1,7 @@
-// import { Link } from 'react-router-dom';
-import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
-import SingleCourse from '../../components/SingleCourse/SingleCourse';
+import NavListLessons from '../../components/NavListOfLessons/NavListLessons';
 
-const SingleCoursePage = () => {
+const LessonPage = () => {
   let setTitle = [
     {
       id: Math.random() * 1000,
@@ -29,10 +27,9 @@ const SingleCoursePage = () => {
   return (
     <div>
       <Header setTitle={setTitle}></Header>
-      <SingleCourse></SingleCourse>
-      <Footer></Footer>
+      <NavListLessons/>
     </div>
   );
 };
 
-export default SingleCoursePage;
+export default LessonPage;

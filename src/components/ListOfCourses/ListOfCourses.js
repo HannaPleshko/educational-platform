@@ -9,7 +9,7 @@ const ListOfCourses = () => {
   },
   {
     id: Math.random() * 1000,
-    title: 'HTML + CSS'
+    title: 'HTML & CSS'
   },
   {
     id: Math.random() * 1000,

@@ -1,0 +1,29 @@
+.nav-container {
+    position: relative;
+    padding: 21px 14px;
+    width: 240px;
+    height: 100%;
+    background-color: #457eaf;
+}
+
+.nav-container h1 {
+    color: #fff;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.topic-container h1 {
+    color: #fff;
+    font-size: 22px;
+}
+
+.li-lesson {
+    list-style: none;
+}
+
+.li-lesson p {
+    margin-left: 10%;
+    padding: 7px;
+    color: #fff;
+    font-size: 17px;
+}
