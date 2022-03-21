@@ -1,3 +1,4 @@
+@import url(../../variables/css/color.css);
 .student-home {
     position: relative;
 }
@@ -12,7 +13,7 @@ margin-top: 37px;
 }
 .left-nav p{
     display: block;
-    color: #151429;
+    color: var(--151429);
     font-size: 18px;
     font-weight: 400;
     padding: 1rem 0.6rem;
@@ -27,7 +28,7 @@ margin-top: 37px;
 
 .about-user{
     position: relative;
-    background-color: #FFF;
+    background-color: var(--fff);
     box-shadow: 1px 1px 3px 1px rgb(0 0 0 / 16%);
     width: 25%;
     padding: 33px 40px;
@@ -46,16 +47,16 @@ margin-top: 37px;
     justify-content: center;
 }
 .user-name {
-    color: #151429;
+    color: var(--151429);
     font-size: 25px;
 }
 .user-email {
-    color: #7e7e7e;
+    color: var(--7e7e7e);
     font-size: 16px;
 }
 .link-profile {
     margin: auto 0 0 auto;
-   color: #151429;
+   color: var(--151429);
     font-size: 18px;
 }
 

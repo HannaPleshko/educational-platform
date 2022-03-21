@@ -1,6 +1,7 @@
-/* main section */
+@import url(../../variables/css/color.css);
+
 .gradient {
-    background-image: linear-gradient(211deg, #f3f3f3, hsla(0, 0%, 100%, 0) 20%);
+    background-image: linear-gradient(211deg, var(--f3f3f3), hsla(0, 0%, 100%, 0) 20%);
 }
 
 .main {
@@ -16,7 +17,7 @@
 }
 
 .end_contain {
-    border-top: 1px solid #d1cccc;
+    border-top: 1px solid var(--d1cccc);
     width: 1200px;
     margin: auto;
 }
@@ -56,7 +57,7 @@
     margin-bottom: 0;
     padding-bottom: 0;
     line-height: 70px;
-    color: #151429;
+    color: var(--151429);
     font-size: 53px;
     font-weight: 400;
     letter-spacing: -1.5px;
@@ -65,7 +66,7 @@
 .hero-description-spacing {
     max-width: 450px;
     margin-bottom: 20px;
-    color: #151429;
+    color: var(--151429);
     font-size: 20px;
     font-weight: 400;
     letter-spacing: -.005em;
@@ -84,9 +85,9 @@
 .btn {
     min-width: 180px;
     border-radius: 50px;
-    background-color: #02238f;
+    background-color: var(--02238f);
     transition: all 350ms ease;
-    color: #fff;
+    color: var(--fff);
     text-align: center;
     display: inline-block;
     padding: 15px 25px;
@@ -96,7 +97,7 @@
 }
 
 .btn:hover {
-    background-color: #193eb8;
+    background-color: var(--193eb8);
 }
 
 .main_1 {
@@ -153,7 +154,7 @@
 
 .head-section__reason-title {
     font: var(--font-100);
-    color: #151429;
+    color: var(--151429);
     font-size: 18px;
     font-weight: 400;
     margin-left: 15px;
@@ -191,7 +192,7 @@
     margin-bottom: 0;
     padding-bottom: 0;
     line-height: 70px;
-    color: #151429;
+    color: var(--151429);
     font-size: 42px;
     font-weight: 400;
     letter-spacing: -1.5px;
@@ -200,7 +201,7 @@
 .container-p {
     max-width: 450px;
     margin: 20px 0 20px 0;
-    color: #151429;
+    color: var(--151429);
     font-size: 18px;
     font-weight: 400;
     letter-spacing: -.005em;
@@ -226,7 +227,7 @@
     /*margin-bottom: 0;*/
     padding-bottom: 0;
     line-height: 70px;
-    color: #151429;
+    color: var(--151429);
     font-size: 42px;
     font-weight: 400;
     letter-spacing: -1.5px;
@@ -242,7 +243,7 @@
 
 /* you will learn */
 .main-learn {
-    background-color: #f3f3f3;
+    background-color: var(--f3f3f3);
     position: relative;
     padding: 110px 20px 70px;
 }
@@ -263,7 +264,7 @@
 .learn-flex_arrow p {
     display: flex;
     align-items: center;
-    color: #151429;
+    color: var(--151429);
     font-size: 18px;
     font-weight: 400;
     letter-spacing: -.005em;
@@ -282,7 +283,7 @@
     display: block;
     padding-bottom: 0;
     line-height: 70px;
-    color: #151429;
+    color: var(--151429);
     font-size: 42px;
     font-weight: 400;
     letter-spacing: -1.5px;
@@ -293,9 +294,9 @@
 .learn-container-btn {
     min-width: 180px;
     border-radius: 50px;
-    background-color: #02238f;
+    background-color: var(--02238f);
     transition: all 350ms ease;
-    color: #fff;
+    color: var(--fff);
     text-align: center;
     display: inline-block;
     padding: 15px 25px;
@@ -305,7 +306,7 @@
 }
 
 .learn-container-btn:hover {
-    background-color: #193eb8;
+    background-color: var(--193eb8);
 }
 
 .learn-container-btn-div {
@@ -342,7 +343,7 @@
 
 .whywe-plus p {
     margin-left: 25px;
-    color: #151429;
+    color: var(--151429);
     font-size: 18px;
     font-weight: 400;
     letter-spacing: -.005em;
@@ -351,17 +352,17 @@
 }
 
 .container-whywe--p1 {
-    color: #151429;
+    color: var(--151429);
     font-size: 18px;
     font-weight: 400;
     letter-spacing: -.005em;
-    border-left: 1px solid #d1cccc;
+    border-left: 1px solid var(--d1cccc);
     padding-left: 20px;
     margin: 30px 7% 40px;
 }
 
 .container-whywe-p2 {
-    color: #151429;
+    color: var(--151429);
     font-size: 18px;
     font-weight: 400;
     letter-spacing: -.005em;
@@ -391,7 +392,7 @@
 }
 
 .container-reviews-p {
-    color: #151429;
+    color: var(--151429);
     font-size: 20px;
     font-weight: 400;
     letter-spacing: -.005em;
@@ -418,13 +419,13 @@
 
 .reviews {
     max-width: 32%;
-    background: #FFFFFF;
+    background: var(--fff);
     box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.12);
     border-radius: 25px;
 }
 
 .container-reviews--p1 {
-    color: #151429;
+    color: var(--151429);
     font-size: 20px;
     font-weight: 400;
     letter-spacing: -.005em;
@@ -433,7 +434,7 @@
 }
 
 .container-reviews--p2 {
-    color: #151429;
+    color: var(--151429);
     font-size: 18px;
     font-weight: 400;
     letter-spacing: -.005em;

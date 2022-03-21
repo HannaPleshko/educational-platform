@@ -4,7 +4,7 @@ import Header from '../../components/Header/Header';
 import SingleCourse from '../../components/SingleCourse/SingleCourse';
 
 const SingleCoursePage = () => {
-  let setTitle = [
+  let titles = [
     {
       id: Math.random() * 1000,
       title: 'Why HS?'
@@ -28,7 +28,7 @@ const SingleCoursePage = () => {
 
   return (
     <div>
-      <Header setTitle={setTitle}></Header>
+      <Header titles={titles}></Header>
       <SingleCourse></SingleCourse>
       <Footer></Footer>
     </div>

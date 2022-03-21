@@ -2,7 +2,7 @@ import Header from '../../components/Header/Header';
 import Student from '../../components/Registry/Student/Student';
 
 const RegistrationStudentPage = () => {
-  let setTitle = [
+  let titles = [
     {
       id: Math.random() * 1000,
       title: 'Why HS?'
@@ -25,7 +25,7 @@ const RegistrationStudentPage = () => {
     }]
   return (
     <div>
-      <Header setTitle={setTitle}></Header>
+      <Header titles={titles}></Header>
       <Student></Student>
     </div>
   );

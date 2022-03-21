@@ -1,3 +1,5 @@
+@import url(../../../variables/css/color.css);
+
 .nav-desktop {
     position: sticky;
     top: 0;
@@ -27,22 +29,18 @@
 
 .nav-link {
     text-decoration: none;
-    /* margin-top: 5px; */
     margin-right: 2vw;
     align-items: center;
     border-bottom: 2px solid transparent;
-    color: #151429;
+    color: var(--151429);
     font-size: 18px;
     line-height: 27px;
     margin-top: auto;
     margin-bottom: auto;
-    /*text-decoration: none;*/
 }
 
 .nav-link:hover {
-    /*text-decoration: underline;*/
-    /*text-decoration-color: #FA8080;*/
-    border-bottom: 2px solid #FA8080;;
+    border-bottom: 2px solid var(--0370D3);;
 }
 
 .nav-btn {
@@ -51,9 +49,9 @@
     padding: 5px 15px;
     border-style: solid;
     border-width: 2px;
-    border-color: #151429;
+    border-color: var(--151429);
     background-color: transparent;
-    color: #151429;
+    color: var(--151429);
     font-size: 18px;
     border-radius: 50px;
     transition: all 350ms ease;
@@ -61,6 +59,6 @@
 }
 
 .nav-btn:hover {
-    background-color: #151429;
-    color: #fff;
+    background-color: var(--151429);
+    color: var(--fff);
 }

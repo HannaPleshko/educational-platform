@@ -1,3 +1,5 @@
+@import url(../../variables/css/color.css);
+
 .footer {
     position: relative;
     height: auto;
@@ -5,8 +7,7 @@
     margin-top: 0;
     margin-bottom: 0;
     padding: 60px 30px 0;
-    background-color: #457eaf;
-    color: #457eaf;
+    background-color:  var(--457eaf);
 }
 
 .footer-logo {
@@ -33,7 +34,7 @@
     display: block;
     margin-top: 0;
     margin-bottom: 8px;
-    color: #fff;
+    color: var(--fff);
     text-decoration: none;
     font-size: 17px;
 }
@@ -51,7 +52,7 @@
 }
 .white {
     display: block;
-    color: #fff;
+    color: var(--fff);
     font-style: normal;
     text-decoration: none;
     font-size: 20px;
@@ -64,9 +65,9 @@
     padding: 15px 25px;
     border-style: solid;
     border-width: 2px;
-    border-color: #fff;
+    border-color: var(--fff);
     background-color: transparent;
-    color: #fff;
+    color: var(--fff);
     font-size: 17px;
     border-radius: 50px;
     transition: all 350ms ease;
@@ -74,13 +75,13 @@
 }
 
 .nav-btn:hover {
-    background-color: #fff;
-    color: #151429;
+    background-color: var(--fff);
+    color: var(--151429);
 }
 
 
 .small-caps {
-    color: #fff;
+    color: var(--fff);
     position: absolute;
     left: 0;
     top: auto;

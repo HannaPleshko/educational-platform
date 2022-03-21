@@ -3,7 +3,7 @@ import CourseItem from './CourseItem';
 import listOfCourses from './css/ListOfCourses.module.css';
 
 const ListOfCourses = () => {
-  let setCourses = [{
+  let сourses = [{
     id: Math.random() * 1000,
     title: 'Web Development'
   },
@@ -43,7 +43,7 @@ const ListOfCourses = () => {
   return (
     <div className={listOfCourses['list_courses']}>
       <div className={listOfCourses['courses']}>
-        {setCourses.map((item) => (
+        {сourses.map((item) => (
           <CourseItem key={item.id} title={item.title} {...item} />
         ))}
       </div>

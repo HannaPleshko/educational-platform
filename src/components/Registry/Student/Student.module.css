@@ -1,10 +1,12 @@
+@import url(../../../variables/css/color.css);
+
 .content {
     padding-top: 100px;
     margin-bottom: 70px;
 }
 
 .mycontain {
-    background-color: #FFF;
+    background-color: var(--fff);
     box-shadow: 0 2px 8px 3px rgb(0 0 0 / 5%);
     width: 520px;
     padding: 33px 70px;
@@ -14,7 +16,7 @@
 
 .block-logo-student h2 {
     display: block;
-    color: #151429;
+    color: var(--151429);
     font-size: 22px;
     font-weight: 400;
     text-align: center;
@@ -31,14 +33,14 @@
 
 .block-student p, .block-pwd p {
     display: block;
-    color: #151429;
+    color: var(--151429);
     font-size: 18px;
     font-weight: 400;
 }
 
 .block-student input, .block-pwd input {
     outline: none;
-    border: solid 1px #A7ABAE;
+    border: solid 1px var(--A7ABAE);
     border-radius: 10px;
     height: 44px;
     width: 100%;
@@ -52,7 +54,7 @@
 
 .student--forgotpwd {
     display: block;
-    color: #151429;
+    color: var(--151429);
     font-size: 18px;
     font-weight: 400;
     margin-top: auto;
@@ -61,7 +63,7 @@
 }
 
 .forgotpwd-link, .reg-link {
-    color: #539CDA;
+    color: var(--539CDA);
     font-size: 18px;
     font-weight: 400;
     margin-left: 5px;
@@ -69,7 +71,7 @@
 
 .mycontain--log {
     display: block;
-    color: #151429;
+    color: var(--151429);
     font-size: 18px;
     font-weight: 400;
     text-align: center;
@@ -79,9 +81,9 @@
 .btn-student {
     min-width: 130px;
     border-radius: 50px;
-    background-color: #02238f;
+    background-color: var(--02238f);
     transition: all 350ms ease;
-    color: #fff;
+    color: var(--fff);
     text-align: center;
     display: inline-block;
     padding: 5px 15px;
@@ -90,5 +92,5 @@
 }
 
 .btn-student:hover {
-    background-color: #193eb8;
+    background-color: var(--193eb8);
 }

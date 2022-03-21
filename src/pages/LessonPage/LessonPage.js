@@ -2,7 +2,7 @@ import Header from '../../components/Header/Header';
 import NavListLessons from '../../components/NavListOfLessons/NavListLessons';
 
 const LessonPage = () => {
-  let setTitle = [
+  let titles = [
     {
       id: Math.random() * 1000,
       title: 'Why HS?'
@@ -26,8 +26,9 @@ const LessonPage = () => {
 
   return (
     <div>
-      <Header setTitle={setTitle}></Header>
+      <Header titles={titles}></Header>
       <NavListLessons/>
+      
     </div>
   );
 };

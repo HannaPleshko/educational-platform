@@ -1,3 +1,4 @@
+@import url(../../../variables/css/color.css);
 .list_courses {
     position: relative;
 }
@@ -10,7 +11,7 @@
 
 .course {
     position: relative;
-    background-color: #FFF;
+    background-color: var(--fff);
     box-shadow: 0 2px 10px 3px rgb(0 0 0 / 5%);
     width: 20%;
     padding: 33px 40px;
@@ -24,20 +25,20 @@
 .color-line-193eb8 {
     position: absolute;
     border-radius: 25px 25px 0 0;
-    background-color: #539CDA;
+    background-color: var(--539CDA);
     margin: -33px -40px;
     width: 100%;
     height: 10px;
 }
 .course p{
     display: block;
-    color: #151429;
+    color: var(--151429);
     font-size: 16px;
     font-weight: 400;
 }
 .course h3{
     display: block;
-    color: #151429;
+    color: var(--151429);
     font-weight: 400;
     font-size: 20px;
     font-weight: 400;
@@ -45,7 +46,7 @@
 }
 .course h5{
     display: block;
-    color: #151429;
+    color: var(--151429);
     font-size: 16px;
     font-weight: 400;
 

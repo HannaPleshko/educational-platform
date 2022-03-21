@@ -19,6 +19,10 @@ const NavListLessons = ({ }) => {
                 id: 3,
                 topic: 'topic 3'
             },
+            {
+                id: 4,
+                topic: 'topic 4'
+            },
         ],
         lesson: [
             {
@@ -54,7 +58,7 @@ const NavListLessons = ({ }) => {
         <nav className={lesson['nav-container']}>
             <h1>{_id}</h1>
             {set.topic.map((item) =>
-                <ItemTopic id={item.id} topic={item.topic} setLessons={set.lesson} />
+                <ItemTopic id={item.id} topic={item.topic} lessons={set.lesson} />
             )}
         </nav>
 
