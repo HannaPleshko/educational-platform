@@ -1,5 +1,7 @@
+import DoTask from '../../components/DoTask/DoTask';
 import Header from '../../components/Header/Header';
 import NavListLessons from '../../components/NavListOfLessons/NavListLessons';
+import lesson from './css/LessonPage.module.css'
 
 const LessonPage = () => {
   let titles = [
@@ -27,8 +29,10 @@ const LessonPage = () => {
   return (
     <div>
       <Header titles={titles}></Header>
-      <NavListLessons/>
-      
+      <div className={lesson['flex-content']}>
+        <NavListLessons />
+        <DoTask />
+      </div>
     </div>
   );
 };

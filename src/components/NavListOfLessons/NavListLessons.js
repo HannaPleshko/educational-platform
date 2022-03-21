@@ -9,46 +9,41 @@ const NavListLessons = ({ }) => {
         topic: [
             {
                 id: 1,
-                topic: 'topic 1'
+                topic: 'Введение'
             },
             {
                 id: 2,
-                topic: 'topic 2'
+                topic: 'topic 1'
             },
             {
                 id: 3,
-                topic: 'topic 3'
+                topic: 'topic 2'
             },
             {
                 id: 4,
-                topic: 'topic 4'
+                topic: 'topic 3'
             },
         ],
         lesson: [
             {
                 id: 1,
-                topic_id: 1,
-                lesson: 'the first lesson'
-            },
-            {
-                id: 2,
-                topic_id: 1,
-                lesson: 'the second lesson'
-            },
-            {
-                id: 3,
                 topic_id: 2,
                 lesson: 'the first lesson'
             },
             {
-                id: 4,
+                id: 2,
+                topic_id: 2,
+                lesson: 'the second lesson'
+            },
+            {
+                id: 3,
                 topic_id: 3,
                 lesson: 'the first lesson'
             },
             {
-                id: 5,
-                topic_id: 3,
-                lesson: 'the second lesson'
+                id: 4,
+                topic_id: 4,
+                lesson: 'the first lesson'
             },
         ]
     }

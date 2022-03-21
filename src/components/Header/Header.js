@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import header from './css/Header.module.css';
 import NavList from './NavList';
 import { useAuth } from '../../hooks/auth.hook';
 
 const Header = ({ titles }) => {
+  const { _id } = useParams()
+  console.log(_id);
   const { token } = useAuth();
   const isAuthenticated = !!token;
   const auth = useAuth();

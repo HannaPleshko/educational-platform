@@ -1,13 +1,16 @@
 @import url(../../../variables/css/color.css);
 
 .nav-container {
-    position: relative;
     padding: 21px 14px;
-    width: 240px;
-    height: 100%;
+    width: 15%;
+    height: 100vh;
     background-color: var(--457eaf);
 }
 
+.nav-container::-webkit-scrollbar {
+    width: 0;
+}
+ 
 .nav-container h1 {
     color: var(--fff);
     font-size: 25px;
