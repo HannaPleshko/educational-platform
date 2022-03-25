@@ -5,7 +5,6 @@ import { useAuth } from '../../hooks/auth.hook';
 
 const Header = ({ titles }) => {
   const { _id } = useParams()
-  console.log(_id);
   const { token } = useAuth();
   const isAuthenticated = !!token;
   const auth = useAuth();

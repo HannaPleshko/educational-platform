@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import loader from './css/Loader.module.css';
 
-export const Loader = () => (
+const Loader = () => (
   <div className={classNames(loader['spinner'])}>
     <div className={classNames(loader["blob"], loader["top"])}></div>
     <div className={classNames(loader["blob"], loader["bottom"])}></div>
@@ -10,3 +10,5 @@ export const Loader = () => (
     <div className={classNames(loader["blob"], loader["move-blob"])}></div>
   </div>
 );
+
+export default Loader;
