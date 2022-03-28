@@ -3,7 +3,7 @@ import GuestHomeSection from '../../components/GuestHomeSection/GuestHomeSection
 import Header from '../../components/Header/Header';
 
 const GuestHome = () => {
-  let setTitle = [
+  let titles = [
     {
       id: Math.random() * 1000,
       title: 'Why HS?'
@@ -27,7 +27,7 @@ const GuestHome = () => {
 
   return (
     <div>
-      <Header setTitle={setTitle}></Header>
+      <Header titles={titles}></Header>
       <GuestHomeSection></GuestHomeSection>
       <Footer></Footer>
     </div>

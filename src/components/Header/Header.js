@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import header from './css/Header.module.css';
 import NavList from './NavList';
 import { useAuth } from '../../hooks/auth.hook';
 
-const Header = ({ setTitle }) => {
+const Header = ({ titles }) => {
+  const { _id } = useParams()
   const { token } = useAuth();
   const isAuthenticated = !!token;
   const auth = useAuth();
@@ -22,7 +23,7 @@ const Header = ({ setTitle }) => {
           <div className={header['nav-logo-link']}></div>
         </Link>
 
-        {(<NavList setTitle={setTitle} />)}
+        {(<NavList titles={titles} />)}
 
         {!isAuthenticated
           ? (<div className={header['nav-links-right']}>

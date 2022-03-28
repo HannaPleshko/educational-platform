@@ -1,3 +1,6 @@
+@import url(../../variables/css/color.css);
+@import url(../../variables/css/size.css);
+
 .footer {
     position: relative;
     height: auto;
@@ -5,8 +8,7 @@
     margin-top: 0;
     margin-bottom: 0;
     padding: 60px 30px 0;
-    background-color: #1f1e37;
-    color: #1f1e37;
+    background-color:  var(--main-blue);
 }
 
 .footer-logo {
@@ -33,9 +35,9 @@
     display: block;
     margin-top: 0;
     margin-bottom: 8px;
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
-    font-size: 17px;
+    font-size: var(--standard_text);
 }
 .footer-upper-wrap{
     display: flex;
@@ -51,10 +53,10 @@
 }
 .white {
     display: block;
-    color: #fff;
+    color: var(--white);
     font-style: normal;
     text-decoration: none;
-    font-size: 20px;
+    font-size: var(--standard_text);
 }
 
 .nav-btn {
@@ -64,23 +66,23 @@
     padding: 15px 25px;
     border-style: solid;
     border-width: 2px;
-    border-color: #fff;
+    border-color: var(--white);
     background-color: transparent;
-    color: #fff;
-    font-size: 17px;
+    color: var(--white);
+    font-size: var(--standard_text);
     border-radius: 50px;
     transition: all 350ms ease;
     text-align: center;
 }
 
 .nav-btn:hover {
-    background-color: #fff;
-    color: #151429;
+    background-color: var(--white);
+    color: var(--black);
 }
 
 
 .small-caps {
-    color: #fff;
+    color: var(--white);
     position: absolute;
     left: 0;
     top: auto;

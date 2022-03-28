@@ -1,0 +1,15 @@
+@import url(../../../variables/css/color.css);
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    padding: 21px 40px;
+}
+
+.main-content h2 {
+    padding: 10px 0;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: left;
+}

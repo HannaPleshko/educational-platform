@@ -1,3 +1,5 @@
+@import url(../../variables/css/color.css);
+@import url(../../variables/css/size.css);
 .student-home {
     position: relative;
 }
@@ -12,8 +14,8 @@ margin-top: 37px;
 }
 .left-nav p{
     display: block;
-    color: #151429;
-    font-size: 18px;
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     padding: 1rem 0.6rem;
 }
@@ -27,7 +29,7 @@ margin-top: 37px;
 
 .about-user{
     position: relative;
-    background-color: #FFF;
+    background-color: var(--white);
     box-shadow: 1px 1px 3px 1px rgb(0 0 0 / 16%);
     width: 25%;
     padding: 33px 40px;
@@ -46,17 +48,17 @@ margin-top: 37px;
     justify-content: center;
 }
 .user-name {
-    color: #151429;
-    font-size: 25px;
+    color: var(--black);
+    font-size: var(--fourth_font_size);
 }
 .user-email {
-    color: #7e7e7e;
-    font-size: 16px;
+    color: var(--dark_gray);
+    font-size: var(--standard_text);
 }
 .link-profile {
     margin: auto 0 0 auto;
-   color: #151429;
-    font-size: 18px;
+   color: var(--black);
+    font-size: var(--standard_text);
 }
 
 .img-user {

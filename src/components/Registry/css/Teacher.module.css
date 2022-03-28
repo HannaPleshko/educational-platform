@@ -1,10 +1,13 @@
+@import url(../../../variables/css/color.css);
+@import url(../../../variables/css/size.css);
+
 .content {
     padding-top: 100px;
     margin-bottom: 70px;
 }
 
 .mycontain {
-    background-color: #FFF;
+    background-color: var(--white);
     box-shadow: 0 2px 8px 3px rgb(0 0 0 / 5%);
     width: 520px;
     padding: 33px 70px;
@@ -14,8 +17,8 @@
 
 .block-logo-teacher h2 {
     display: block;
-    color: #151429;
-    font-size: 22px;
+    color: var(--black);
+    font-size: var(--fourth_font_size);
     font-weight: 400;
     text-align: center;
     margin-bottom: 20px;
@@ -31,14 +34,14 @@
 
 .block-teacher p, .block-pwd p {
     display: block;
-    color: #151429;
-    font-size: 18px;
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
 }
 
 .block-teacher input, .block-pwd input {
     outline: none;
-    border: solid 1px #A7ABAE;
+    border: solid 1px var(--second_gray);
     border-radius: 10px;
     height: 44px;
     width: 100%;
@@ -52,8 +55,8 @@
 
 .teacher--forgotpwd {
     display: block;
-    color: #151429;
-    font-size: 18px;
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     margin-top: auto;
     margin-bottom: auto;
@@ -61,16 +64,16 @@
 }
 
 .forgotpwd-link, .reg-link {
-    color: #539CDA;
-    font-size: 18px;
+    color: var(--light_blue);
+    font-size: var(--standard_text);
     font-weight: 400;
     margin-left: 5px;
 }
 
 .mycontain--log {
     display: block;
-    color: #151429;
-    font-size: 18px;
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     text-align: center;
     margin-bottom: 30px;
@@ -79,16 +82,16 @@
 .btn-teacher {
     min-width: 130px;
     border-radius: 50px;
-    background-color: #02238f;
+    background-color: var(--dark_blue);
     transition: all 350ms ease;
-    color: #fff;
+    color: var(--white);
     text-align: center;
     display: inline-block;
     padding: 5px 15px;
-    font-size: 18px;
+    font-size: var(--standard_text);
     font-weight: 400;
 }
 
 .btn-teacher:hover {
-    background-color: #193eb8;
+    background-color: var(--second_blue);
 }

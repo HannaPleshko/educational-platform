@@ -1,3 +1,4 @@
+@import url(../../../variables/css/color.css);
 .spinner {
     position: absolute;
     width: 40px;
@@ -9,7 +10,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    border: 2px solid #151429;
+    border: 2px solid var(--black);
     width: 13px;
     height: 13px;
     border-radius: 50%;
@@ -27,7 +28,7 @@
     animation: blob-left 1s infinite ease-in;
 }
 .spinner .move-blob {
-    background: #151429;
+    background: var(--black);
     top: 0;
     animation: blob-spinner-mover 1s infinite ease-in;
 }

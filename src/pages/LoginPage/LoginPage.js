@@ -2,7 +2,7 @@ import Header from '../../components/Header/Header';
 import Login from '../../components/Login/Login';
 
 const LoginPage = () => {
-  let setTitle = [
+  let titles = [
     {
       id: Math.random() * 1000,
       title: 'Why HS?'
@@ -26,7 +26,7 @@ const LoginPage = () => {
 
   return (
     <div>
-      <Header setTitle={setTitle}></Header>
+      <Header titles={titles}></Header>
       <Login></Login>
     </div>
   );

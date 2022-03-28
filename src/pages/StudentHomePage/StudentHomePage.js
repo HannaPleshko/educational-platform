@@ -5,7 +5,7 @@ import Header from '../../components/Header/Header';
 import studentHomePage from './StudentHomePage.module.css';
 
 const StudentHomePage = () => {
-  let setTitle = [
+  let titles = [
     {
       id: Math.random() * 1000,
       title: 'Why HS?'
@@ -29,7 +29,7 @@ const StudentHomePage = () => {
 
   return (
     <div className={studentHomePage['student-home']}>
-      <Header setTitle={setTitle}></Header>
+      <Header titles={titles}></Header>
       <div className={studentHomePage['main-information-navagate']}>
         <div className={studentHomePage['left-nav']}>
           <Link to={'*'}>
