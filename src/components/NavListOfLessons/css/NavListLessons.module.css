@@ -1,10 +1,11 @@
 @import url(../../../variables/css/color.css);
+@import url(../../../variables/css/size.css);
 
 .nav-container {
     padding: 21px 14px;
     width: 15%;
     height: 100vh;
-    background-color: var(--457eaf);
+    background-color: var(--main-footer-nav);
 }
 
 .nav-container::-webkit-scrollbar {
@@ -12,13 +13,13 @@
 }
  
 .nav-container h1 {
-    color: var(--fff);
-    font-size: 25px;
+    color: var(--white);
+    font-size: var(--h4);
     padding: 10px;
 }
 
 .topic-container h1 {
-    color: var(--fff);
+    color: var(--white);
     font-size: 22px;
 }
 
@@ -29,6 +30,6 @@
 .li-lesson p {
     margin-left: 10%;
     padding: 7px;
-    color: var(--fff);
-    font-size: 17px;
+    color: var(--white);
+    font-size: var(--p);
 }

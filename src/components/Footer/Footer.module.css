@@ -1,4 +1,5 @@
 @import url(../../variables/css/color.css);
+@import url(../../variables/css/size.css);
 
 .footer {
     position: relative;
@@ -7,7 +8,7 @@
     margin-top: 0;
     margin-bottom: 0;
     padding: 60px 30px 0;
-    background-color:  var(--457eaf);
+    background-color:  var(--main-footer-nav);
 }
 
 .footer-logo {
@@ -34,9 +35,9 @@
     display: block;
     margin-top: 0;
     margin-bottom: 8px;
-    color: var(--fff);
+    color: var(--white);
     text-decoration: none;
-    font-size: 17px;
+    font-size: var(--p);
 }
 .footer-upper-wrap{
     display: flex;
@@ -52,10 +53,10 @@
 }
 .white {
     display: block;
-    color: var(--fff);
+    color: var(--white);
     font-style: normal;
     text-decoration: none;
-    font-size: 20px;
+    font-size: var(--p);
 }
 
 .nav-btn {
@@ -65,23 +66,23 @@
     padding: 15px 25px;
     border-style: solid;
     border-width: 2px;
-    border-color: var(--fff);
+    border-color: var(--white);
     background-color: transparent;
-    color: var(--fff);
-    font-size: 17px;
+    color: var(--white);
+    font-size: var(--p);
     border-radius: 50px;
     transition: all 350ms ease;
     text-align: center;
 }
 
 .nav-btn:hover {
-    background-color: var(--fff);
-    color: var(--151429);
+    background-color: var(--white);
+    color: var(--font);
 }
 
 
 .small-caps {
-    color: var(--fff);
+    color: var(--white);
     position: absolute;
     left: 0;
     top: auto;

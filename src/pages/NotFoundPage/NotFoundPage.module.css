@@ -31,7 +31,7 @@
 
 .contant_box_404 h3 {
     margin-top: 60px;
-    color: var(--151429);
+    color: var(--font);
     font-size: 23px;
     font-weight: 400;
     /* letter-spacing: -.005em; */
@@ -40,7 +40,7 @@
 
 .contant_box_404 p {
     /* margin-top: 5px; */
-    color: var(--151429);
+    color: var(--font);
     font-size: 23px;
     font-weight: 400;
     /* letter-spacing: -.005em; */
@@ -49,7 +49,7 @@
 
 .link_404 {
     margin-left: 5px;
-    color: var(--539CDA);
+    color: var(--link);
     font-size: 23px;
     font-weight: 400;
     letter-spacing: -.005em;

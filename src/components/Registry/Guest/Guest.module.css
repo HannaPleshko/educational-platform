@@ -1,4 +1,5 @@
 @import url(../../../variables/css/color.css);
+@import url(../../../variables/css/size.css);
 
 .content {
     padding-top: 100px;
@@ -6,7 +7,7 @@
 }
 
 .mycontain {
-    background-color: var(--fff);
+    background-color: var(--white);
     box-shadow: 0 2px 8px 3px rgb(0 0 0 / 5%);
     width: 520px;
     padding: 33px 70px;
@@ -20,16 +21,16 @@
 }
 
 .mycontain h2 {
-    color: var(--151429);
-    font-size: 22px;
+    color: var(--font);
+    font-size: var(--h4);
     font-weight: 400;
     text-align: center;
     margin-bottom: 36px;
 }
 
 .block-student, .block-teacher {
-    background: var(--fff);
-    border: 1px solid var(--0370D3);
+    background: var(--white);
+    border: 1px solid var(--bckg-btn--hover);
     box-sizing: border-box;
     border-radius: 25px;
     padding: 0 15px;
@@ -62,8 +63,8 @@
 
 .block-student h3, .block-teacher h3 {
     display: block;
-    color: var(--151429);
-    font-size: 20px;
+    color: var(--font);
+    font-size: var(--p);
     font-weight: 400;
     margin-top: 23px;
     /*letter-spacing: -1.5px;*/
@@ -72,8 +73,8 @@
 
 .block-student p, .block-teacher p {
     display: block;
-    color: var(--151429);
-    font-size: 18px;
+    color: var(--font);
+    font-size: var(--p);
     font-weight: 400;
     margin-top: 23px;
     /*letter-spacing: -1.5px;*/
@@ -81,8 +82,8 @@
 }
 
 .mycontain--login {
-    color: var(--151429);
-    font-size: 20px;
+    color: var(--font);
+    font-size: var(--p);
     font-weight: 400;
     margin-top: 23px;
     display: flex;
@@ -90,9 +91,8 @@
 }
 
 .mycontain--login a {
-    /*display: block;*/
-    color: var(--539CDA);
-    font-size: 20px;
+    color: var(--link);
+    font-size: var(--p);
     font-weight: 400;
     margin-left: 5px;
 }

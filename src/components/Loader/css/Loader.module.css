@@ -10,7 +10,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    border: 2px solid var(--151429);
+    border: 2px solid var(--font);
     width: 13px;
     height: 13px;
     border-radius: 50%;
@@ -28,7 +28,7 @@
     animation: blob-left 1s infinite ease-in;
 }
 .spinner .move-blob {
-    background: var(--151429);
+    background: var(--font);
     top: 0;
     animation: blob-spinner-mover 1s infinite ease-in;
 }
