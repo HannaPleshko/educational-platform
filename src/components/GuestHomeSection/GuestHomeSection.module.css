@@ -59,7 +59,7 @@
     padding-bottom: 0;
     line-height: 70px;
     color: var(--black);
-    font-size: var(--header_fnt_size);
+    font-size: var(--first_font_size);
     font-weight: 400;
     letter-spacing: -1.5px;
 }
@@ -229,7 +229,7 @@
     padding-bottom: 0;
     line-height: 70px;
     color: var(--black);
-    font-size: var(--second_fnt_size);
+    font-size: var(--second_font_size);
     font-weight: 400;
     letter-spacing: -1.5px;
     text-align: center;

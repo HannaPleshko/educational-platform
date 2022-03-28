@@ -25,7 +25,7 @@
 }
 .course-name {
   color: var(--white);
-  font-size: var(--header_fnt_size);
+  font-size: var(--first_font_size);
   font-weight: 800;
   margin: 0px 0 10px 0;
 }
@@ -78,7 +78,7 @@
 }
 .course-result h2 {
   color: var(--black);
-  font-size: var(--fourth_fnt_size);
+  font-size: var(--fourth_font_size);
 }
 .course-result ul {
   color: var(--black);
@@ -92,7 +92,7 @@
 }
 .course-description h2 {
   color: var(--black);
-  font-size: var(--fourth_fnt_size);
+  font-size: var(--fourth_font_size);
 }
 .course-description p {
   color: var(--black);
@@ -138,11 +138,11 @@
   margin-left: auto;
   margin-right: auto;
   color: var(--black);
-  font-size: var(--third_fnt_size);
+  font-size: var(--third_font_size);
 }
 .course-lessons ul li h2 {
   color: var(--black);
-  font-size: var(--fourth_fnt_size);
+  font-size: var(--fourth_font_size);
   padding: 0.2rem 0
 }
 .course-lessons-content {
