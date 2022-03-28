@@ -14,8 +14,8 @@ margin-top: 37px;
 }
 .left-nav p{
     display: block;
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     padding: 1rem 0.6rem;
 }
@@ -48,17 +48,17 @@ margin-top: 37px;
     justify-content: center;
 }
 .user-name {
-    color: var(--font);
-    font-size: var(--h4);
+    color: var(--black);
+    font-size: var(--fourth-fnt-size);
 }
 .user-email {
-    color: var(--fond-addl);
-    font-size: var(--p);
+    color: var(--dark_gray);
+    font-size: var(--standard_text);
 }
 .link-profile {
     margin: auto 0 0 auto;
-   color: var(--font);
-    font-size: var(--p);
+   color: var(--black);
+    font-size: var(--standard_text);
 }
 
 .img-user {

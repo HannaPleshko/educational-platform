@@ -5,7 +5,7 @@
     padding: 21px 14px;
     width: 15%;
     height: 100vh;
-    background-color: var(--main-footer-nav);
+    background-color: var(--main-blue);
 }
 
 .nav-container::-webkit-scrollbar {
@@ -14,7 +14,7 @@
  
 .nav-container h1 {
     color: var(--white);
-    font-size: var(--h4);
+    font-size: var(--fourth-fnt-size);
     padding: 10px;
 }
 
@@ -31,5 +31,5 @@
     margin-left: 10%;
     padding: 7px;
     color: var(--white);
-    font-size: var(--p);
+    font-size: var(--standard_text);
 }

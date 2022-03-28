@@ -26,29 +26,29 @@
 .color-line-193eb8 {
     position: absolute;
     border-radius: 25px 25px 0 0;
-    background-color: var(--link);
+    background-color: var(--light_blue);
     margin: -33px -40px;
     width: 100%;
     height: 10px;
 }
 .course p{
     display: block;
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
 }
 .course h3{
     display: block;
-    color: var(--font);
+    color: var(--black);
     font-weight: 400;
-    font-size: var(--h4);
+    font-size: var(--fourth-fnt-size);
     font-weight: 400;
     margin: 0px 0 10px 0;
 }
 .course h5{
     display: block;
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
 
 }

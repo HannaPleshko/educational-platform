@@ -2,7 +2,7 @@
 @import url(../../variables/css/size.css);
 
 .gradient {
-    background-image: linear-gradient(211deg, var(--gradient), hsla(0, 0%, 100%, 0) 20%);
+    background-image: linear-gradient(211deg, var(--white-f3f3f3), hsla(0, 0%, 100%, 0) 20%);
 }
 
 .main {
@@ -18,7 +18,7 @@
 }
 
 .end_contain {
-    border-top: 1px solid var(--gradient-blocks);
+    border-top: 1px solid var(--light_gray);
     width: 1200px;
     margin: auto;
 }
@@ -58,8 +58,8 @@
     margin-bottom: 0;
     padding-bottom: 0;
     line-height: 70px;
-    color: var(--font);
-    font-size: var(--h1);
+    color: var(--black);
+    font-size: var(--header-fnt-size);
     font-weight: 400;
     letter-spacing: -1.5px;
 }
@@ -67,8 +67,8 @@
 .hero-description-spacing {
     max-width: 450px;
     margin-bottom: 20px;
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     letter-spacing: -.005em;
 }
@@ -86,7 +86,7 @@
 .btn {
     min-width: 180px;
     border-radius: 50px;
-    background-color: var(--bckg-btn);
+    background-color: var(--dark_blue);
     transition: all 350ms ease;
     color: var(--white);
     text-align: center;
@@ -98,7 +98,7 @@
 }
 
 .btn:hover {
-    background-color: var(--bckg-btn--hover);
+    background-color: var(--second_blue);
 }
 
 .main_1 {
@@ -155,8 +155,8 @@
 
 .head-section__reason-title {
     font: var(--font-100);
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     margin-left: 15px;
 }
@@ -193,7 +193,7 @@
     margin-bottom: 0;
     padding-bottom: 0;
     line-height: 70px;
-    color: var(--font);
+    color: var(--black);
     font-size: 42px;
     font-weight: 400;
     letter-spacing: -1.5px;
@@ -202,8 +202,8 @@
 .container-p {
     max-width: 450px;
     margin: 20px 0 20px 0;
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     letter-spacing: -.005em;
 }
@@ -228,8 +228,8 @@
     /*margin-bottom: 0;*/
     padding-bottom: 0;
     line-height: 70px;
-    color: var(--font);
-    font-size: var(--h2);
+    color: var(--black);
+    font-size: var(--second-fnt-size);
     font-weight: 400;
     letter-spacing: -1.5px;
     text-align: center;
@@ -244,7 +244,7 @@
 
 /* you will learn */
 .main-learn {
-    background-color: var(--gradient);
+    background-color: var(--white-f3f3f3);
     position: relative;
     padding: 110px 20px 70px;
 }
@@ -265,8 +265,8 @@
 .learn-flex_arrow p {
     display: flex;
     align-items: center;
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     letter-spacing: -.005em;
     margin-left: 40px;
@@ -284,7 +284,7 @@
     display: block;
     padding-bottom: 0;
     line-height: 70px;
-    color: var(--font);
+    color: var(--black);
     font-size: 42px;
     font-weight: 400;
     letter-spacing: -1.5px;
@@ -295,19 +295,19 @@
 .learn-container-btn {
     min-width: 180px;
     border-radius: 50px;
-    background-color: var(--bckg-btn);
+    background-color: var(--dark_blue);
     transition: all 350ms ease;
     color: var(--white);
     text-align: center;
     display: inline-block;
     padding: 15px 25px;
-    font-size: var(--p);
+    font-size: var(--standard_text);
     font-weight: 400;
     letter-spacing: -.005em;
 }
 
 .learn-container-btn:hover {
-    background-color: var(--bckg-btn--hover);
+    background-color: var(--second_blue);
 }
 
 .learn-container-btn-div {
@@ -344,8 +344,8 @@
 
 .whywe-plus p {
     margin-left: 25px;
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     letter-spacing: -.005em;
     display: flex;
@@ -353,18 +353,18 @@
 }
 
 .container-whywe--p1 {
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     letter-spacing: -.005em;
-    border-left: 1px solid var(--gradient-blocks);
+    border-left: 1px solid var(--light_gray);
     padding-left: 20px;
     margin: 30px 7% 40px;
 }
 
 .container-whywe-p2 {
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     letter-spacing: -.005em;
 }
@@ -393,8 +393,8 @@
 }
 
 .container-reviews-p {
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     letter-spacing: -.005em;
     text-align: center;
@@ -426,8 +426,8 @@
 }
 
 .container-reviews--p1 {
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     letter-spacing: -.005em;
     text-align: center;
@@ -435,8 +435,8 @@
 }
 
 .container-reviews--p2 {
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     letter-spacing: -.005em;
     text-align: center;

@@ -21,8 +21,8 @@
 }
 
 .mycontain h2 {
-    color: var(--font);
-    font-size: var(--h4);
+    color: var(--black);
+    font-size: var(--fourth-fnt-size);
     font-weight: 400;
     text-align: center;
     margin-bottom: 36px;
@@ -30,7 +30,7 @@
 
 .block-student, .block-teacher {
     background: var(--white);
-    border: 1px solid var(--bckg-btn--hover);
+    border: 1px solid var(--second_blue);
     box-sizing: border-box;
     border-radius: 25px;
     padding: 0 15px;
@@ -63,8 +63,8 @@
 
 .block-student h3, .block-teacher h3 {
     display: block;
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     margin-top: 23px;
     /*letter-spacing: -1.5px;*/
@@ -73,8 +73,8 @@
 
 .block-student p, .block-teacher p {
     display: block;
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     margin-top: 23px;
     /*letter-spacing: -1.5px;*/
@@ -82,8 +82,8 @@
 }
 
 .mycontain--login {
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     margin-top: 23px;
     display: flex;
@@ -91,8 +91,8 @@
 }
 
 .mycontain--login a {
-    color: var(--link);
-    font-size: var(--p);
+    color: var(--light_blue);
+    font-size: var(--standard_text);
     font-weight: 400;
     margin-left: 5px;
 }

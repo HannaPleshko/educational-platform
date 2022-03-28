@@ -17,8 +17,8 @@
 
 .block-logo-teacher h2 {
     display: block;
-    color: var(--font);
-    font-size: var(--h4);
+    color: var(--black);
+    font-size: var(--fourth-fnt-size);
     font-weight: 400;
     text-align: center;
     margin-bottom: 20px;
@@ -34,14 +34,14 @@
 
 .block-teacher p, .block-pwd p {
     display: block;
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
 }
 
 .block-teacher input, .block-pwd input {
     outline: none;
-    border: solid 1px var(--border-input);
+    border: solid 1px var(--second_gray);
     border-radius: 10px;
     height: 44px;
     width: 100%;
@@ -55,8 +55,8 @@
 
 .teacher--forgotpwd {
     display: block;
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     margin-top: auto;
     margin-bottom: auto;
@@ -64,16 +64,16 @@
 }
 
 .forgotpwd-link, .reg-link {
-    color: var(--link);
-    font-size: var(--p);
+    color: var(--light_blue);
+    font-size: var(--standard_text);
     font-weight: 400;
     margin-left: 5px;
 }
 
 .mycontain--log {
     display: block;
-    color: var(--font);
-    font-size: var(--p);
+    color: var(--black);
+    font-size: var(--standard_text);
     font-weight: 400;
     text-align: center;
     margin-bottom: 30px;
@@ -82,16 +82,16 @@
 .btn-teacher {
     min-width: 130px;
     border-radius: 50px;
-    background-color: var(--bckg-btn);
+    background-color: var(--dark_blue);
     transition: all 350ms ease;
     color: var(--white);
     text-align: center;
     display: inline-block;
     padding: 5px 15px;
-    font-size: var(--p);
+    font-size: var(--standard_text);
     font-weight: 400;
 }
 
 .btn-teacher:hover {
-    background-color: var(--bckg-btn--hover);
+    background-color: var(--second_blue);
 }
