@@ -1,7 +1,7 @@
 :root {
-    --header-fnt-size: 50px;
-    --second-fnt-size: 42px;
-    --third-fnt-size: 30px;
-    --fourth-fnt-size: 25px;
+    --header_fnt_size: 50px;
+    --second_fnt_size: 42px;
+    --third_fnt_size: 30px;
+    --fourth_fnt_size: 25px;
     --standard_text: 20px
 }

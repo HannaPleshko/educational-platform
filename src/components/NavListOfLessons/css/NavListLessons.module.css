@@ -14,7 +14,7 @@
  
 .nav-container h1 {
     color: var(--white);
-    font-size: var(--fourth-fnt-size);
+    font-size: var(--fourth_fnt_size);
     padding: 10px;
 }
 

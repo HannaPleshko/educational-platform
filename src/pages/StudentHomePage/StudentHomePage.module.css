@@ -49,7 +49,7 @@ margin-top: 37px;
 }
 .user-name {
     color: var(--black);
-    font-size: var(--fourth-fnt-size);
+    font-size: var(--fourth_fnt_size);
 }
 .user-email {
     color: var(--dark_gray);

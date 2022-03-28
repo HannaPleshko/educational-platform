@@ -22,7 +22,7 @@
 
 .mycontain h2 {
     color: var(--black);
-    font-size: var(--fourth-fnt-size);
+    font-size: var(--fourth_fnt_size);
     font-weight: 400;
     text-align: center;
     margin-bottom: 36px;
