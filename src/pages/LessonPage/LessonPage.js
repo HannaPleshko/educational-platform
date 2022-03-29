@@ -5,8 +5,13 @@ import NavListLessons from '../../components/NavListOfLessons/NavListLessons';
 import Loader from '../../components/Loader/Loader';
 import lesson from './css/LessonPage.module.css'
 import { useHttp } from "../../hooks/http.hook";
+import { useGetLessonsQuery } from '../../redux';
 
 const LessonPage = () => {
+  const {data, error, isLoading } = useGetLessonsQuery()
+  console.log(error);
+
+
   const [lessons, setLessons] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
   const [lessonsPerPage] = useState(1)
@@ -33,30 +38,30 @@ const LessonPage = () => {
     }]
   const { request, loading } = useHttp();
 
-  const form = {
-    topic_id: 5, course_id: 4
-  }
+  // const form = {
+  //   topic_id: 5, course_id: 4
+  // }
 
-  useEffect(() => {
-    const getLessons = async () => {
-      try {
-        const res = await request('/lesson/all-les', 'POST', form);
-        setLessons(res)
-      } catch (e) {
-      }
-    }
-    getLessons()
-  }, [])
+  // useEffect(() => {
+  //   const getLessons = async () => {
+  //     try {
+  //       const res = await request('/lesson/all-les', 'POST', form);
+  //       setLessons(res)
+  //     } catch (e) {
+  //     }
+  //   }
+  //   getLessons()
+  // }, [])
 
-  if (loading) {
-    return <Loader />
-  }
+  // if (loading) {
+  //   return <Loader />
+  // }
 
-  const lastLessonIndex = currentPage * lessonsPerPage;
-  const firstLessonIndex = lastLessonIndex - lessonsPerPage;
-  const currentLesson = lessons.slice(firstLessonIndex, lastLessonIndex);
+  // const lastLessonIndex = currentPage * lessonsPerPage;
+  // const firstLessonIndex = lastLessonIndex - lessonsPerPage;
+  // const currentLesson = lessons.slice(firstLessonIndex, lastLessonIndex);
 
-  const paginate = pageNumber => setCurrentPage(pageNumber)
+  // const paginate = pageNumber => setCurrentPage(pageNumber)
 
 
   return (
@@ -64,7 +69,7 @@ const LessonPage = () => {
       <Header titles={titles}></Header>
       <div className={lesson['flex-content']}>
         <NavListLessons />
-        <DoTask arrLength={lessons} currentLesson={currentLesson} lessonsPerPage={lessonsPerPage} paginate={paginate} />
+        {/* <DoTask arrLength={lessons} currentLesson={currentLesson} lessonsPerPage={lessonsPerPage} paginate={paginate} /> */}
       </div>
     </div>
   );
