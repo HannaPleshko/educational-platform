@@ -5,16 +5,14 @@ import NavListLessons from '../../components/NavListOfLessons/NavListLessons';
 import Loader from '../../components/Loader/Loader';
 import lesson from './css/LessonPage.module.css'
 import { useHttp } from "../../hooks/http.hook";
-import { useGetLessonsQuery } from '../../redux';
+import { useCreateMutation, useReadQuery } from '../../redux';
 
 const LessonPage = () => {
-  const {data, error, isLoading } = useGetLessonsQuery()
+  const { data, error, isLoading } = useReadQuery('/lesson/all-les/5/4', { refetchOnFocus: true })
+
+  console.log(data);
   console.log(error);
 
-
-  const [lessons, setLessons] = useState([])
-  const [currentPage, setCurrentPage] = useState(1)
-  const [lessonsPerPage] = useState(1)
   let titles = [
     {
       id: Math.random() * 1000,
@@ -36,33 +34,16 @@ const LessonPage = () => {
       id: Math.random() * 1000,
       title: 'Contacts'
     }]
-  const { request, loading } = useHttp();
 
-  // const form = {
-  //   topic_id: 5, course_id: 4
-  // }
-
-  // useEffect(() => {
-  //   const getLessons = async () => {
-  //     try {
-  //       const res = await request('/lesson/all-les', 'POST', form);
-  //       setLessons(res)
-  //     } catch (e) {
-  //     }
-  //   }
-  //   getLessons()
-  // }, [])
-
-  // if (loading) {
-  //   return <Loader />
-  // }
+  if (isLoading) {
+    return <Loader />
+  }
 
   // const lastLessonIndex = currentPage * lessonsPerPage;
   // const firstLessonIndex = lastLessonIndex - lessonsPerPage;
   // const currentLesson = lessons.slice(firstLessonIndex, lastLessonIndex);
 
   // const paginate = pageNumber => setCurrentPage(pageNumber)
-
 
   return (
     <div>
