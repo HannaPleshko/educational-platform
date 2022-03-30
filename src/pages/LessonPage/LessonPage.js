@@ -9,10 +9,6 @@ import { useCreateMutation, useReadQuery } from '../../redux';
 
 const LessonPage = () => {
   const { data, error, isLoading } = useReadQuery('/lesson/all-les/5/4', { refetchOnFocus: true })
-
-  console.log(data);
-  console.log(error);
-
   let titles = [
     {
       id: Math.random() * 1000,
@@ -39,18 +35,11 @@ const LessonPage = () => {
     return <Loader />
   }
 
-  // const lastLessonIndex = currentPage * lessonsPerPage;
-  // const firstLessonIndex = lastLessonIndex - lessonsPerPage;
-  // const currentLesson = lessons.slice(firstLessonIndex, lastLessonIndex);
-
-  // const paginate = pageNumber => setCurrentPage(pageNumber)
-
   return (
     <div>
       <Header titles={titles}></Header>
       <div className={lesson['flex-content']}>
         <NavListLessons />
-        {/* <DoTask arrLength={lessons} currentLesson={currentLesson} lessonsPerPage={lessonsPerPage} paginate={paginate} /> */}
       </div>
     </div>
   );

@@ -1,9 +1,10 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-export const api = createApi({
+
+export const lessonsApi = createApi({
     reducerPath: 'lessons',
-    baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000/' }),
-    refetchOnFocus: true,  
+    baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
+    refetchOnFocus: true,
     endpoints: builder => ({
         read: builder.query({
             query: url => ({
@@ -11,10 +12,10 @@ export const api = createApi({
             }),
             transformResponse: (response) => response,
         }),
-       
+
     }),
 });
 
-export const { useReadQuery } = api
+export const { useReadQuery } = lessonsApi
 
 
