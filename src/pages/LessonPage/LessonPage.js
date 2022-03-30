@@ -5,10 +5,10 @@ import NavListLessons from '../../components/NavListOfLessons/NavListLessons';
 import Loader from '../../components/Loader/Loader';
 import lesson from './css/LessonPage.module.css'
 import { useHttp } from "../../hooks/http.hook";
-import { useCreateMutation, useReadQuery } from '../../redux';
+import { useGetLessonsQuery } from '../../redux';
 
 const LessonPage = () => {
-  const { data, error, isLoading } = useReadQuery('/lesson/all-les/5/4', { refetchOnFocus: true })
+  const { data, error, isLoading } = useGetLessonsQuery('/lesson/all-les/5/4', { refetchOnFocus: true })
   let titles = [
     {
       id: Math.random() * 1000,

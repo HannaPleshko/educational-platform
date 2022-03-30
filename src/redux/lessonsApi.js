@@ -6,7 +6,7 @@ export const lessonsApi = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
     refetchOnFocus: true,
     endpoints: builder => ({
-        read: builder.query({
+        getLessons: builder.query({
             query: url => ({
                 url: `${url}`,
             }),
@@ -16,6 +16,6 @@ export const lessonsApi = createApi({
     }),
 });
 
-export const { useReadQuery } = lessonsApi
+export const { useGetLessonsQuery } = lessonsApi
 
 
