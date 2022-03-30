@@ -18,9 +18,7 @@ function App() {
         isAuthenticated,
       }}
     >
-      <div>
-       {routes}
-      </div>
+      {routes}
     </AuthContext.Provider>
   );
 }
