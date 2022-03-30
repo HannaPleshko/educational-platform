@@ -9,6 +9,7 @@ import { useGetLessonsQuery } from '../../redux';
 
 const LessonPage = () => {
   const { data, error, isLoading } = useGetLessonsQuery('/lesson/all-les/5/4', { refetchOnFocus: true })
+
   let titles = [
     {
       id: Math.random() * 1000,
