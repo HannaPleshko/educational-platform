@@ -9,7 +9,7 @@ const ListOfCourses = () => {
   return (
     <div className={listOfCourses['list_courses']}>
       <div className={listOfCourses['courses']}>
-        {data.map((item) => (
+        {data && data.map((item) => (
           <CourseItem key={item.id} title={item.title} {...item} />
         ))}
       </div>
