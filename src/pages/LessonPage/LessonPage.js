@@ -4,11 +4,11 @@ import Header from '../../components/Header/Header';
 import NavListLessons from '../../components/NavListOfLessons/NavListLessons';
 import Loader from '../../components/Loader/Loader';
 import lesson from './css/LessonPage.module.css'
-import { useHttp } from "../../hooks/http.hook";
 import { useGetLessonsQuery } from '../../redux';
 
 const LessonPage = () => {
   const { data, error, isLoading } = useGetLessonsQuery('/lesson/all-les/5/4', { refetchOnFocus: true })
+
   let titles = [
     {
       id: Math.random() * 1000,
