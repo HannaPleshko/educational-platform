@@ -52,13 +52,12 @@ const LessonPage = () => {
     paginate = pageNumber => setCurrentPage(pageNumber)
   }
 
-  // if (error.status === 404) {
-  //   return <h1>404</h1>
-  // }
   if (isLoading) {
     return <Loader />
   }
-
+  console.log(currentLesson);
+  console.log(paginate);
+  
   return (
     <div>
       <Header titles={titles}></Header>
