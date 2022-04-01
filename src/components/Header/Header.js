@@ -4,7 +4,6 @@ import NavList from './NavList';
 import { useAuth } from '../../hooks/auth.hook';
 
 const Header = ({ titles }) => {
-  const { _id } = useParams()
   const { token } = useAuth();
   const isAuthenticated = !!token;
   const auth = useAuth();

@@ -1,21 +1,27 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import listOfCourses from './css/ListOfCourses.module.css';
 
 const CourseItem = ({ id, title }) => {
+  const [currentCourse, setCurrentCourse] = useState(null)
+
+  const changeId = (e) => {
+    setCurrentCourse(e.target.id)
+  }
 
   return (
-    <div id={id} className={listOfCourses['course']}>
-      <Link to={`/course/${title}`}>
+    <div onClick={changeId} id={id} className={listOfCourses['course']}>
+      <Link to={`/course/${title}/${id}`}>
         <pre>
-          <div className={listOfCourses['color-line-193eb8']}> </div>
+          <div id={id} className={listOfCourses['color-line-193eb8']}> </div>
         </pre>
-        <p>Course</p>
-        <h3>{title}</h3>
-        <div className={listOfCourses['continue']}>
-          <h5>Continue</h5>
+        <p id={id}>Course</p>
+        <h3 id={id}>{title}</h3>
+        <div id={id} className={listOfCourses['continue']}>
+          <h5 id={id}>Continue</h5>
         </div>
       </Link>
-    </div>
+    </div >
   );
 };
 
