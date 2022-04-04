@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import DoTask from '../../components/DoTask/DoTask';
 import Header from '../../components/Header/Header';
 import NavListLessons from '../../components/NavListOfLessons/NavListLessons';
@@ -7,7 +8,12 @@ import lesson from './css/LessonPage.module.css'
 import { useGetLessonsQuery } from '../../redux';
 
 const LessonPage = () => {
-  const { data, error, isLoading } = useGetLessonsQuery('/lesson/all-les/5/4', { refetchOnFocus: true })
+  const { course_id } = useParams()
+
+  const [currentPage, setCurrentPage] = useState(1)
+  const lessonsPerPage = 1
+
+  const { data, error, isLoading, isSuccess } = useGetLessonsQuery(`/lesson/${course_id}/5`, { refetchOnFocus: true })
 
   let titles = [
     {
@@ -31,6 +37,15 @@ const LessonPage = () => {
       title: 'Contacts'
     }]
 
+  let lastLessonIndex, firstLessonIndex, currentLesson, paginate;
+  if (data) {
+    lastLessonIndex = currentPage * lessonsPerPage;
+    firstLessonIndex = lastLessonIndex - lessonsPerPage;
+    currentLesson = data.slice(firstLessonIndex, lastLessonIndex);
+
+    paginate = pageNumber => setCurrentPage(pageNumber)
+  }
+
   if (isLoading) {
     return <Loader />
   }
@@ -40,6 +55,7 @@ const LessonPage = () => {
       <Header titles={titles}></Header>
       <div className={lesson['flex-content']}>
         <NavListLessons />
+        {data ? <DoTask arrLength={data.length} currentLesson={currentLesson} lessonsPerPage={lessonsPerPage} paginate={paginate} /> : <h1>Для данной темы пока что нет уроков</h1>}
       </div>
     </div>
   );

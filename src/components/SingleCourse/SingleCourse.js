@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import singleCourse from './SingleCourse.module.css';
 
 const SingleCourse = () => {
-    const { _id } = useParams()
+    const { course_id, course_title } = useParams()
 
     return (
         <div className={singleCourse['course-wrapper']}>
@@ -10,7 +10,7 @@ const SingleCourse = () => {
                 <div className={singleCourse['course-main-info']}>
                     <div className={singleCourse['course-main-info-width']}>
                         <p>Course</p>
-                        <div className={singleCourse['course-name']}>{_id}</div>
+                        <div className={singleCourse['course-name']}>{course_title}</div>
                         <div className={singleCourse['course-count-student']}>65 students</div>
                     </div>
                 </div>
@@ -151,7 +151,8 @@ const SingleCourse = () => {
 
                     <div className={singleCourse['course-get-started']}>
                         <div className={singleCourse['course-img']}></div>
-                        <Link to={`/course/${_id}/lessons`}><div className={singleCourse['course-btn']}>Continue</div></Link>
+                        <Link
+                            to={`/course/${course_title}/${course_id}/lessons`}><div className={singleCourse['course-btn']}>Continue</div></Link>
                         <p className={singleCourse['course-get-started-p1']}>Trainer with practice</p>
                         <p className={singleCourse['course-get-started-p2']}>Lifetime access to theory</p>
                     </div>

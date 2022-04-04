@@ -2,10 +2,10 @@ import { Link, useParams } from 'react-router-dom';
 import lesson from './css/NavListLessons.module.css';
 import ItemTopic from './ItemTopic';
 
-const NavListLessons = ({ }) => {
-    const { _id } = useParams()
+const NavListLessons = () => {
+    const { course_title } = useParams()
 
-    const set = {
+    const titles = {
         topic: [
             {
                 id: 1,
@@ -51,9 +51,9 @@ const NavListLessons = ({ }) => {
 
     return (
         <nav className={lesson['nav-container']}>
-            <h1>{_id}</h1>
-            {set.topic.map((item) =>
-                <ItemTopic id={item.id} topic={item.topic} lessons={set.lesson} />
+            <h1>{course_title}</h1>
+            {titles.topic.map((item) =>
+                <ItemTopic id={item.id} topic={item.topic} lessons={titles.lesson} />
             )}
         </nav>
 

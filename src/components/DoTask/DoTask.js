@@ -6,10 +6,10 @@ import { Pagination } from '@mui/material';
 const DoTask = ({ arrLength, currentLesson, paginate }) => {
 
   return (
-    <div className={doTask['main-content']}>
-      <h2>{currentLesson[0].title}</h2>
-      <p>{currentLesson[0].content}</p>
-      <Pagination  count={arrLength} variant="outlined" color="primary" />
+    <div id={currentLesson[0].id} className={doTask['main-content']}>
+      <h2 id={currentLesson[0].id}>{currentLesson[0].title}</h2>
+      <p id={currentLesson[0].id}>{currentLesson[0].content}</p>
+      <Pagination onChange={(event, value) =>  paginate(value)} count={arrLength} variant="outlined" color="primary" />
     </div>
   );
 };
