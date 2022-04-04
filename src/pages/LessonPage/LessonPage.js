@@ -5,17 +5,15 @@ import Header from '../../components/Header/Header';
 import NavListLessons from '../../components/NavListOfLessons/NavListLessons';
 import Loader from '../../components/Loader/Loader';
 import lesson from './css/LessonPage.module.css'
-import { useHttp } from "../../hooks/http.hook";
 import { useGetLessonsQuery } from '../../redux';
 
 const LessonPage = () => {
-  const { course_id, course_title } = useParams()
+  const { course_id } = useParams()
 
   const [currentPage, setCurrentPage] = useState(1)
-  const [lessonsPerPage] = useState(1)
+  const lessonsPerPage = 1
 
   const { data, error, isLoading, isSuccess } = useGetLessonsQuery(`/lesson/${course_id}/5`, { refetchOnFocus: true })
-
 
   let titles = [
     {
@@ -39,11 +37,7 @@ const LessonPage = () => {
       title: 'Contacts'
     }]
 
-  let lastLessonIndex;
-  let firstLessonIndex;
-  let currentLesson;
-  let paginate;
-
+  let lastLessonIndex, firstLessonIndex, currentLesson, paginate;
   if (data) {
     lastLessonIndex = currentPage * lessonsPerPage;
     firstLessonIndex = lastLessonIndex - lessonsPerPage;
@@ -55,15 +49,13 @@ const LessonPage = () => {
   if (isLoading) {
     return <Loader />
   }
-  console.log(currentLesson);
-  console.log(paginate);
-  
+
   return (
     <div>
       <Header titles={titles}></Header>
       <div className={lesson['flex-content']}>
         <NavListLessons />
-        <DoTask arrLength={data.length} currentLesson={currentLesson} lessonsPerPage={lessonsPerPage} paginate={paginate} />
+        {data ? <DoTask arrLength={data.length} currentLesson={currentLesson} lessonsPerPage={lessonsPerPage} paginate={paginate} /> : <h1>Для данной темы пока что нет уроков</h1>}
       </div>
     </div>
   );
