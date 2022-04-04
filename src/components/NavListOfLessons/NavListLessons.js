@@ -5,7 +5,7 @@ import ItemTopic from './ItemTopic';
 const NavListLessons = () => {
     const { course_title } = useParams()
 
-    const set = {
+    const titles = {
         topic: [
             {
                 id: 1,
@@ -52,8 +52,8 @@ const NavListLessons = () => {
     return (
         <nav className={lesson['nav-container']}>
             <h1>{course_title}</h1>
-            {set.topic.map((item) =>
-                <ItemTopic id={item.id} topic={item.topic} lessons={set.lesson} />
+            {titles.topic.map((item) =>
+                <ItemTopic id={item.id} topic={item.topic} lessons={titles.lesson} />
             )}
         </nav>
 
