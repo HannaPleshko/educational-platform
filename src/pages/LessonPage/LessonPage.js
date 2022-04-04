@@ -5,15 +5,16 @@ import Header from '../../components/Header/Header';
 import NavListLessons from '../../components/NavListOfLessons/NavListLessons';
 import Loader from '../../components/Loader/Loader';
 import lesson from './css/LessonPage.module.css'
-import { useGetLessonsQuery } from '../../redux';
+import { useGetLessonsQuery, useGetTopicsQuery } from '../../redux';
 
 const LessonPage = () => {
-  const { course_id } = useParams()
+  const { course_id, topic_id } = useParams()
 
   const [currentPage, setCurrentPage] = useState(1)
   const lessonsPerPage = 1
 
-  const { data, error, isLoading, isSuccess } = useGetLessonsQuery(`/lesson/${course_id}/5`, { refetchOnFocus: true })
+  let { data: data_lesson, isLoading: loading_lesson, isError } = useGetLessonsQuery(`/lesson/${course_id}/${topic_id}`, { refetchOnFocus: true })
+  const { data: data_topic } = useGetTopicsQuery(`/topic/${course_id}`, { refetchOnFocus: true })
 
   let titles = [
     {
@@ -38,15 +39,15 @@ const LessonPage = () => {
     }]
 
   let lastLessonIndex, firstLessonIndex, currentLesson, paginate;
-  if (data) {
+  if (data_lesson && !isError) {
     lastLessonIndex = currentPage * lessonsPerPage;
     firstLessonIndex = lastLessonIndex - lessonsPerPage;
-    currentLesson = data.slice(firstLessonIndex, lastLessonIndex);
+    currentLesson = data_lesson.slice(firstLessonIndex, lastLessonIndex);
 
     paginate = pageNumber => setCurrentPage(pageNumber)
-  }
+  } else data_lesson = null
 
-  if (isLoading) {
+  if (loading_lesson) {
     return <Loader />
   }
 
@@ -54,8 +55,8 @@ const LessonPage = () => {
     <div>
       <Header titles={titles}></Header>
       <div className={lesson['flex-content']}>
-        <NavListLessons />
-        {data ? <DoTask arrLength={data.length} currentLesson={currentLesson} lessonsPerPage={lessonsPerPage} paginate={paginate} /> : <h1>Для данной темы пока что нет уроков</h1>}
+        {data_topic ? <NavListLessons data_topic={data_topic} /> : null}
+        {data_lesson ? <DoTask arrLength={data_lesson.length} currentLesson={currentLesson} lessonsPerPage={lessonsPerPage} paginate={paginate} /> : <h1>Для данной темы пока что нет уроков</h1>}
       </div>
     </div>
   );

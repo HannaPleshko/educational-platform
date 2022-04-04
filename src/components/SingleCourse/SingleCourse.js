@@ -1,8 +1,15 @@
 import { Link, useParams } from 'react-router-dom';
+import { useGetTopicsQuery } from '../../redux';
+import Loader from '../../components/Loader/Loader';
 import singleCourse from './SingleCourse.module.css';
 
 const SingleCourse = () => {
     const { course_id, course_title } = useParams()
+    const { data: data_topic, isLoading: isLoading_topic } = useGetTopicsQuery(`/topic/${course_id}`, { refetchOnFocus: true })
+
+    if (isLoading_topic) {
+        return <Loader />
+    }
 
     return (
         <div className={singleCourse['course-wrapper']}>
@@ -151,8 +158,9 @@ const SingleCourse = () => {
 
                     <div className={singleCourse['course-get-started']}>
                         <div className={singleCourse['course-img']}></div>
-                        <Link
-                            to={`/course/${course_title}/${course_id}/lessons`}><div className={singleCourse['course-btn']}>Continue</div></Link>
+                        {data_topic ? <Link
+                            to={`/course/${course_title}/${course_id}/${data_topic[0].title}/${data_topic[0].id}`}><div className={singleCourse['course-btn']}>Continue</div>
+                        </Link> : null}
                         <p className={singleCourse['course-get-started-p1']}>Trainer with practice</p>
                         <p className={singleCourse['course-get-started-p2']}>Lifetime access to theory</p>
                     </div>
