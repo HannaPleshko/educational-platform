@@ -5,15 +5,16 @@ import Header from '../../components/Header/Header';
 import NavListLessons from '../../components/NavListOfLessons/NavListLessons';
 import Loader from '../../components/Loader/Loader';
 import lesson from './css/LessonPage.module.css'
-import { useGetLessonsQuery } from '../../redux';
+import { useGetLessonsQuery, useGetTopicsQuery } from '../../redux';
 
 const LessonPage = () => {
-  const { course_id } = useParams()
+  const { courseId, topicId } = useParams()
 
   const [currentPage, setCurrentPage] = useState(1)
   const lessonsPerPage = 1
 
-  const { data, error, isLoading, isSuccess } = useGetLessonsQuery(`/lesson/${course_id}/5`, { refetchOnFocus: true })
+  let { data: lessons, isLoading, isError } = useGetLessonsQuery(`/lesson/${courseId}/${topicId}`)
+  const { data: topics } = useGetTopicsQuery(`/topic/${courseId}`)
 
   let titles = [
     {
@@ -38,13 +39,13 @@ const LessonPage = () => {
     }]
 
   let lastLessonIndex, firstLessonIndex, currentLesson, paginate;
-  if (data) {
+  if (lessons && !isError) {
     lastLessonIndex = currentPage * lessonsPerPage;
     firstLessonIndex = lastLessonIndex - lessonsPerPage;
-    currentLesson = data.slice(firstLessonIndex, lastLessonIndex);
+    currentLesson = lessons.slice(firstLessonIndex, lastLessonIndex);
 
     paginate = pageNumber => setCurrentPage(pageNumber)
-  }
+  } else lessons = null
 
   if (isLoading) {
     return <Loader />
@@ -54,8 +55,8 @@ const LessonPage = () => {
     <div>
       <Header titles={titles}></Header>
       <div className={lesson['flex-content']}>
-        <NavListLessons />
-        {data ? <DoTask arrLength={data.length} currentLesson={currentLesson} lessonsPerPage={lessonsPerPage} paginate={paginate} /> : <h1>Для данной темы пока что нет уроков</h1>}
+        {topics ? <NavListLessons topics={topics} /> : null}
+        {lessons ? <DoTask arrLength={lessons.length} currentLesson={currentLesson} lessonsPerPage={lessonsPerPage} paginate={paginate} /> : <h1>Для данной темы пока что нет уроков</h1>}
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import listOfCourses from './css/ListOfCourses.module.css';
 import { useGetCoursesQuery } from '../../redux';
 
 const ListOfCourses = () => {
-  const { data, error, isLoading } = useGetCoursesQuery('/course', { refetchOnFocus: true })
+  const { data, error, isLoading } = useGetCoursesQuery('/course')
 
   return (
     <div className={listOfCourses['list_courses']}>
