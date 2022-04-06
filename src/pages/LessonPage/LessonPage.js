@@ -14,7 +14,7 @@ const LessonPage = () => {
   const lessonsPerPage = 1
 
   let { data: lessons, isLoading, isError } = useGetLessonsQuery(`/lesson/${courseId}/${topicId}`)
-  const { data: data_topic } = useGetTopicsQuery(`/topic/${courseId}`)
+  const { data: topics } = useGetTopicsQuery(`/topic/${courseId}`)
 
   let titles = [
     {
@@ -55,7 +55,7 @@ const LessonPage = () => {
     <div>
       <Header titles={titles}></Header>
       <div className={lesson['flex-content']}>
-        {data_topic ? <NavListLessons data_topic={data_topic} /> : null}
+        {topics ? <NavListLessons topics={topics} /> : null}
         {lessons ? <DoTask arrLength={lessons.length} currentLesson={currentLesson} lessonsPerPage={lessonsPerPage} paginate={paginate} /> : <h1>Для данной темы пока что нет уроков</h1>}
       </div>
     </div>
