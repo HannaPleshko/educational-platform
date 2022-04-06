@@ -4,10 +4,10 @@ import Loader from '../../components/Loader/Loader';
 import singleCourse from './SingleCourse.module.css';
 
 const SingleCourse = () => {
-    const { course_id, course_title } = useParams()
-    const { data: data_topic, isLoading: isLoading_topic } = useGetTopicsQuery(`/topic/${course_id}`, { refetchOnFocus: true })
+    const { courseId, courseTitle } = useParams()
+    const { data: dataTopic, isLoading } = useGetTopicsQuery(`/topic/${courseId}`)
 
-    if (isLoading_topic) {
+    if (isLoading) {
         return <Loader />
     }
 
@@ -17,7 +17,7 @@ const SingleCourse = () => {
                 <div className={singleCourse['course-main-info']}>
                     <div className={singleCourse['course-main-info-width']}>
                         <p>Course</p>
-                        <div className={singleCourse['course-name']}>{course_title}</div>
+                        <div className={singleCourse['course-name']}>{courseTitle}</div>
                         <div className={singleCourse['course-count-student']}>65 students</div>
                     </div>
                 </div>
@@ -158,8 +158,8 @@ const SingleCourse = () => {
 
                     <div className={singleCourse['course-get-started']}>
                         <div className={singleCourse['course-img']}></div>
-                        {data_topic ? <Link
-                            to={`/course/${course_title}/${course_id}/${data_topic[0].title}/${data_topic[0].id}`}><div className={singleCourse['course-btn']}>Continue</div>
+                        {dataTopic ? <Link
+                            to={`/course/${courseTitle}/${courseId}/${dataTopic[0].title}/${dataTopic[0].id}`}><div className={singleCourse['course-btn']}>Continue</div>
                         </Link> : null}
                         <p className={singleCourse['course-get-started-p1']}>Trainer with practice</p>
                         <p className={singleCourse['course-get-started-p2']}>Lifetime access to theory</p>

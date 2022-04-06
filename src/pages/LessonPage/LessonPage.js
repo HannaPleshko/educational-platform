@@ -8,13 +8,13 @@ import lesson from './css/LessonPage.module.css'
 import { useGetLessonsQuery, useGetTopicsQuery } from '../../redux';
 
 const LessonPage = () => {
-  const { course_id, topic_id } = useParams()
+  const { courseId, topicId } = useParams()
 
   const [currentPage, setCurrentPage] = useState(1)
   const lessonsPerPage = 1
 
-  let { data: data_lesson, isLoading: loading_lesson, isError } = useGetLessonsQuery(`/lesson/${course_id}/${topic_id}`, { refetchOnFocus: true })
-  const { data: data_topic } = useGetTopicsQuery(`/topic/${course_id}`, { refetchOnFocus: true })
+  let { data: lessons, isLoading, isError } = useGetLessonsQuery(`/lesson/${courseId}/${topicId}`)
+  const { data: data_topic } = useGetTopicsQuery(`/topic/${courseId}`)
 
   let titles = [
     {
@@ -39,15 +39,15 @@ const LessonPage = () => {
     }]
 
   let lastLessonIndex, firstLessonIndex, currentLesson, paginate;
-  if (data_lesson && !isError) {
+  if (lessons && !isError) {
     lastLessonIndex = currentPage * lessonsPerPage;
     firstLessonIndex = lastLessonIndex - lessonsPerPage;
-    currentLesson = data_lesson.slice(firstLessonIndex, lastLessonIndex);
+    currentLesson = lessons.slice(firstLessonIndex, lastLessonIndex);
 
     paginate = pageNumber => setCurrentPage(pageNumber)
-  } else data_lesson = null
+  } else lessons = null
 
-  if (loading_lesson) {
+  if (isLoading) {
     return <Loader />
   }
 
@@ -56,7 +56,7 @@ const LessonPage = () => {
       <Header titles={titles}></Header>
       <div className={lesson['flex-content']}>
         {data_topic ? <NavListLessons data_topic={data_topic} /> : null}
-        {data_lesson ? <DoTask arrLength={data_lesson.length} currentLesson={currentLesson} lessonsPerPage={lessonsPerPage} paginate={paginate} /> : <h1>Для данной темы пока что нет уроков</h1>}
+        {lessons ? <DoTask arrLength={lessons.length} currentLesson={currentLesson} lessonsPerPage={lessonsPerPage} paginate={paginate} /> : <h1>Для данной темы пока что нет уроков</h1>}
       </div>
     </div>
   );

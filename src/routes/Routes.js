@@ -16,8 +16,8 @@ export const RoutesTest = (isAuthenticated) => {
             <>
                 <Routes>
                     <Route path="/course" element={<StudentHomePage />}></Route>
-                    <Route path="/course/:course_title/:course_id" element={<SingleCoursePage />}></Route>
-                    <Route path="/course/:course_title/:course_id/:topic_title/:topic_id" element={<LessonPage />}></Route>
+                    <Route path="/course/:courseTitle/:courseId" element={<SingleCoursePage />}></Route>
+                    <Route path="/course/:courseTitle/:courseId/:topicTitle/:topicId" element={<LessonPage />}></Route>
                     <Route path="*" element={<NotFoundPage />}></Route>
                 </Routes>
             </>
@@ -32,7 +32,7 @@ export const RoutesTest = (isAuthenticated) => {
                 <Route path="/register/student" element={<RegistrationStudentPage />}></Route>
                 <Route path="/register/teacher" element={<RegistrationTeacherPage />}></Route>
                 <Route path="/course" element={<StudentHomePage />}></Route>
-                <Route path="/course/:course_title/:course_id" element={<SingleCoursePage /> }></Route>
+                <Route path="/course/:courseTitle/:courseId" element={<SingleCoursePage /> }></Route>
                 <Route path="*" element={<NotFoundPage />}></Route>
             </Routes>
         </>
