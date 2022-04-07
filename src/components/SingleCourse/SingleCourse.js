@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import { useGetTopicsQuery } from '../../redux';
 import Loader from '../../components/Loader/Loader';
 import singleCourse from './SingleCourse.module.css';
+import TopicItem from './TopicItem';
 
 const SingleCourse = () => {
     const { courseId, courseTitle } = useParams()
@@ -51,107 +52,9 @@ const SingleCourse = () => {
                             <h2>Course Lessons</h2>
                             <p className={singleCourse['course-p-lessons']}>Duration 24 hours</p>
                             <ul>
-                                <li>
-                                    <h1>1</h1>
-                                    <div className={singleCourse['course-lessons-content']}>
-                                        <h2>The first lesson</h2>
-                                        <p>
-                                            Understand what a programming language is. Why the syntax of the language is, although necessary, but not a
-                                            self-sufficient thing. We discuss which language to start learning with and how important the choice is at this stage.
-                                        </p>
-                                    </div>
-
-                                </li>
-                                <li>
-                                    <h1>2</h1>
-                                    <div className={singleCourse['course-lessons-content']}>
-                                        <h2>The second lesson</h2>
-                                        <p>
-                                            Understand what a programming language is. Why the syntax of the language is, although necessary, but not a
-                                            self-sufficient thing. We discuss which language to start learning with and how important the choice is at this stage.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h1>3</h1>
-                                    <div className={singleCourse['course-lessons-content']}>
-                                        <h2>The third lesson</h2>
-                                        <p>
-                                            Understand what a programming language is. Why the syntax of the language is, although necessary, but not a
-                                            self-sufficient thing. We discuss which language to start learning with and how important the choice is at this stage.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h1>4</h1>
-                                    <div className={singleCourse['course-lessons-content']}>
-                                        <h2>The fourth lesson</h2>
-                                        <p>
-                                            Understand what a programming language is. Why the syntax of the language is, although necessary, but not a
-                                            self-sufficient thing. We discuss which language to start learning with and how important the choice is at this stage.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h1>5</h1>
-                                    <div className={singleCourse['course-lessons-content']}>
-                                        <h2>The fifth lesson</h2>
-                                        <p>
-                                            Understand what a programming language is. Why the syntax of the language is, although necessary, but not a
-                                            self-sufficient thing. We discuss which language to start learning with and how important the choice is at this stage.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h1>6</h1>
-                                    <div className={singleCourse['course-lessons-content']}>
-                                        <h2>The sixth lesson</h2>
-                                        <p>
-                                            Understand what a programming language is. Why the syntax of the language is, although necessary, but not a
-                                            self-sufficient thing. We discuss which language to start learning with and how important the choice is at this stage.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h1>7</h1>
-                                    <div className={singleCourse['course-lessons-content']}>
-                                        <h2>The seventh lesson</h2>
-                                        <p>
-                                            Understand what a programming language is. Why the syntax of the language is, although necessary, but not a
-                                            self-sufficient thing. We discuss which language to start learning with and how important the choice is at this stage.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h1>8</h1>
-                                    <div className={singleCourse['course-lessons-content']}>
-                                        <h2>The eighth lesson</h2>
-                                        <p>
-                                            Understand what a programming language is. Why the syntax of the language is, although necessary, but not a
-                                            self-sufficient thing. We discuss which language to start learning with and how important the choice is at this stage.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h1>9</h1>
-                                    <div className={singleCourse['course-lessons-content']}>
-                                        <h2>The ninth lesson</h2>
-                                        <p>
-                                            Understand what a programming language is. Why the syntax of the language is, although necessary, but not a
-                                            self-sufficient thing. We discuss which language to start learning with and how important the choice is at this stage.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h1>10</h1>
-                                    <div className={singleCourse['course-lessons-content']}>
-                                        <h2>The tenth lesson</h2>
-                                        <p>
-                                            Understand what a programming language is. Why the syntax of the language is, although necessary, but not a
-                                            self-sufficient thing. We discuss which language to start learning with and how important the choice is at this stage.
-                                        </p>
-                                    </div>
-                                </li>
+                                {dataTopic ? dataTopic.map((item, index) => (
+                                    <TopicItem course={item} index={index+1} {...item} />
+                                )) : null}
                             </ul>
                         </div>
                     </div>
