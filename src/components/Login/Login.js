@@ -2,8 +2,9 @@ import React, { useState, useContext } from "react";
 import { Link } from 'react-router-dom';
 import login from './Login.module.css';
 import { useHttp } from "../../hooks/http.hook";
-// import { Loader } from "../Loader/Loader";
+import { Loader } from "../Loader/Loader";
 import { AuthContext } from "../../context/AuthContext"
+import { useGetAccessTokenQuery } from '../../redux';
 
 const Login = () => {
     const { request, loading } = useHttp();
@@ -18,16 +19,17 @@ const Login = () => {
         setForm({ ...form, [event.target.name]: event.target.value });
     };
 
-    const doAuthorization = async () => {
-        try {
-            const fetched = await request('/api/auth', 'POST', form);
-        } catch (e) {
-        }
-    }
-
-    // if (loading) {
-    //     return <Loader />
+    // const doAuthorization = async () => {
+    //     try {
+    //         const fetched = await request('/api/auth', 'POST', form);
+    //     } catch (e) {
+    //     }
     // }
+
+    console.log(form);
+    const { data } = useGetAccessTokenQuery('/api/auth', form);
+    console.log(data);
+
 
     return (
         <div className={login["login"]}>
@@ -48,7 +50,7 @@ const Login = () => {
                         <p className={login["mycontain--login"]}>Forgot password?
                             <Link to={"*"} className={login["mycontain--login-link"]}>Click Here</Link>
                         </p>
-                        <Link onClick={doAuthorization} to={'/course'} className={login["btn-login"]}>Log In</Link>
+                        <Link  to={'/course'} className={login["btn-login"]}>Log In</Link>
                     </div>
                     <p className={login["mycontain--reg"]}>Don't have an account?<Link to={"/register"} className={login["mycontain--reg-link"]}>Register</Link>
                     </p>
