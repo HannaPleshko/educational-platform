@@ -37,9 +37,8 @@ const GuestHomeSection = () => {
                 <div className={main['main_2']}></div>
                 <div className={main['head-section__reason-title']}>
                   <span>
-                    CSS, HTML, JavaScript, Node.js,
-                    <br /> React, TypeScript and other <br />
-                    important skills
+                    css, html, JS, Node.js,
+                    <br /> React, TS and other skills
                   </span>
                 </div>
               </div>

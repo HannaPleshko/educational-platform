@@ -20,7 +20,7 @@
 
 .topic-container h1 {
     color: var(--white);
-    font-size: 22px;
+    font-size: var(--standard_text);
 }
 
 .li-lesson {

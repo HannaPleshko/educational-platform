@@ -8,8 +8,6 @@ const NavList = ({ titles }) => {
                 <NavItem key={item.id} title={item.title} {...item} />
             ))}
         </div>
-
-
     );
 };
 

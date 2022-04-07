@@ -2,22 +2,19 @@
 @import url(../../../variables/css/size.css);
 
 .nav-desktop {
-    position: sticky;
-    top: 0;
-    right: 0;
-    z-index: 1500;
     display: flex;
-    height: 80px;
+    height: 70px;
     padding-right: 30px;
     padding-left: 30px;
     justify-content: space-between;
-    box-shadow: 1px 1px 3px 0 rgb(0 0 0 / 16%);
+    max-width: 1200px;
+    margin: auto;
 }
 
 .nav-logo-link {
     background-image: url(../assets/HS_logo_header.png);
-    width: 80px;
-    height: 79px;
+    width: 70px;
+    height: 69px;
     background-size: cover;
 }
 
@@ -27,15 +24,12 @@
     padding-bottom: 2px;
     align-items: center;
 }
+.nav-links-right {
+    width: 15%;
+    justify-content: space-between;
+}
 
 .nav-link {
-    text-decoration: none;
-    margin-right: 2vw;
-    align-items: center;
-    border-bottom: 2px solid transparent;
-    /* color: var(--); */
-    font-size: var(--standard_text);
-    line-height: 27px;
     margin-top: auto;
     margin-bottom: auto;
 }
