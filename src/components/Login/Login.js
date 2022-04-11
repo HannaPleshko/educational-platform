@@ -1,8 +1,7 @@
 import React, { useState, useContext } from 'react';
 import styles from './Login.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useLoginMutation } from '../../redux';
-import { useNavigate } from 'react-router-dom';
 import Loader from '../Loader/Loader';
 import { AuthContext } from '../../context/AuthContext';
 
@@ -57,7 +56,7 @@ const Login = () => {
                 try {
                   const result = await login(form);
                   if (result.data) {
-                    navigate('/course');
+                    navigate('/');
                   }
                 } catch (err) {
                   console.log(err);
