@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styles from './Login.module.css';
 import { Link } from 'react-router-dom';
 import { useLoginMutation } from '../../redux';
 import { useNavigate } from 'react-router-dom';
+import Loader from '../Loader/Loader';
+import { AuthContext } from '../../context/AuthContext';
 
 const Login = () => {
   const navigate = useNavigate();
+  const auth = useContext(AuthContext);
 
   const [form, setForm] = useState({
     email: '',
@@ -15,7 +18,15 @@ const Login = () => {
   const changeForm = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
-  const [login, { isLoading }] = useLoginMutation();
+  const [login, { data, isLoading, isSuccess }] = useLoginMutation();
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (isSuccess) {
+    auth.login(data.token);
+  }
 
   return (
     <div className={styles['login']}>
@@ -46,7 +57,7 @@ const Login = () => {
                 try {
                   const result = await login(form);
                   if (result.data) {
-                    navigate('/');
+                    navigate('/course');
                   }
                 } catch (err) {
                   console.log(err);
@@ -54,7 +65,7 @@ const Login = () => {
               }}
               className={styles['btn-login']}
             >
-              Log In
+                Log In
             </button>
           </div>
           <p className={styles['mycontain--reg']}>

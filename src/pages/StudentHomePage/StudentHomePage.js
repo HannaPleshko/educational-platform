@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import ListOfCourses from '../../components/ListOfCourses/ListOfCourses';
-import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import studentHomePage from './StudentHomePage.module.css';
 
@@ -62,7 +61,6 @@ const StudentHomePage = () => {
           <ListOfCourses></ListOfCourses>
         </div>
       </div>
-      <Footer></Footer>
     </div>
   );
 };
