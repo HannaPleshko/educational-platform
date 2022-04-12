@@ -56,7 +56,7 @@ const Login = () => {
                 try {
                   const result = await login(form);
                   if (result.data) {
-                    navigate('/');
+                    navigate('/course');
                   }
                 } catch (err) {
                   console.log(err);
