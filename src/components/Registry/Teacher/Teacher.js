@@ -1,9 +1,12 @@
-import {Link} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-import axios from "axios";
 import teacher from '../css/Teacher.module.css';
+import { useRegisterMutation } from '../../../redux';
+import Loader from '../../Loader/Loader';
 
 const Teacher = () => {
+    const navigate = useNavigate();
+
     const [form, setForm] = useState({
         name: '',
         surname: '',
@@ -16,10 +19,10 @@ const Teacher = () => {
         setForm({ ...form, [event.target.name]: event.target.value });
     };
 
-    const doRegistrationAsTeacher = async () => {
-        try {
-            const axiosData = await axios.post(`/api/register`, form)
-        } catch (e) {}
+    const [register, { data, isLoading, isSuccess }] = useRegisterMutation();
+
+    if (isLoading) {
+        return <Loader />;
     }
 
     return (
@@ -30,23 +33,35 @@ const Teacher = () => {
                     <div className={teacher["block-teacher"]}>
                         <div className={teacher["block-email"]}>
                             <p>Name</p>
-                            <input name="name" onChange={changeForm} type='text'/>
+                            <input name="name" onChange={changeForm} type='text' />
                         </div>
                         <div className={teacher["block-email"]}>
                             <p>Surname</p>
-                            <input name="surname" onChange={changeForm} type='text'/>
+                            <input name="surname" onChange={changeForm} type='text' />
                         </div>
                         <div className={teacher["block-email"]}>
                             <p>Email</p>
-                            <input name="email" onChange={changeForm} type='text'/>
+                            <input name="email" onChange={changeForm} type='text' />
                         </div>
                         <div className={teacher["block-pwd"]}>
                             <p>Password</p>
-                            <input name="password" onChange={changeForm} type='text'/>
+                            <input name="password" onChange={changeForm} type='text' />
                         </div>
                     </div>
                     <div className={teacher["block-bottom"]}>
-                        <Link className={teacher["btn-teacher"]} to={"*"} onClick={doRegistrationAsTeacher}>Next</Link>
+                        <div className={teacher["btn-teacher"]}
+                            onClick={async () => {
+                                try {
+                                    const result = await register(form);
+                                    if (result.data) {
+                                        navigate('/');
+                                    }
+                                } catch (err) {
+                                    console.log(err);
+                                }
+                            }}>
+                            Next
+                        </div>
                     </div>
                     <p className={teacher["mycontain--log"]}>Already have an account?
                         <Link to={"/login"} className={teacher["reg-link"]}>Log In</Link>

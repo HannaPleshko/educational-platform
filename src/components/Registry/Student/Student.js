@@ -1,9 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import axios from 'axios';
 import student from './Student.module.css';
+import { useRegisterMutation } from '../../../redux';
+import Loader from '../../Loader/Loader';
 
 const Student = () => {
+    const navigate = useNavigate();
+
     const [form, setForm] = useState({
         name: '',
         surname: '',
@@ -16,10 +20,10 @@ const Student = () => {
         setForm({ ...form, [event.target.name]: event.target.value });
     };
 
-    const doRegistrationAsStudent = async () => {
-        try {
-            const axiosData = await axios.post('/api/register', form)
-        } catch (e) { }
+    const [register, { data, isLoading, isSuccess }] = useRegisterMutation();
+
+    if (isLoading) {
+        return <Loader />;
     }
 
     return (
@@ -46,9 +50,21 @@ const Student = () => {
                         </div>
                     </div>
                     <div className={student["block-bottom"]}>
-                        <Link to={"*"} className={student["btn-student"]} onClick={doRegistrationAsStudent}>
+                        <button
+                            onClick={async () => {
+                                try {
+                                    const result = await register(form);
+                                    if (result.data) {
+                                        navigate('/');
+                                    }
+                                } catch (err) {
+                                    console.log(err);
+                                }
+                            }}
+                            className={student["btn-student"]}
+                        >
                             Next
-                        </Link>
+                        </button>
                     </div>
                     <p className={student["mycontain--log"]}>Already have an account?
                         <Link to={"/login"} className={student["reg-link"]}>Log In</Link>
