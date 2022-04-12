@@ -6,15 +6,8 @@ import { useAuth } from '../../hooks/auth.hook';
 
 const Header = ({ titles }) => {
   const navigate = useNavigate();
-  const { token } = useAuth();
+  const { token, logout } = useAuth();
   const isAuthenticated = !!token;
-  const auth = useAuth();
-
-  // useEffect(() => {
-  //   if (!token){
-  //     navigate("/")
-  //   }
-  // }, auth)
 
   return (
     <header className={header['nav-desktop-sticky']}>
@@ -38,7 +31,7 @@ const Header = ({ titles }) => {
           </div>)
           : <div
             onClick={() => {
-              auth.logout();
+              logout();
               navigate("/")
             }}
             className={header['nav-link']}
