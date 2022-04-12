@@ -3,7 +3,6 @@ import Loader from '../../components/Loader/Loader';
 import singleCourse from './SingleCourse.module.css';
 
 const TopicItem = ({ course, index }) => {
-
     return (
         <li>
             <h1>{index}</h1>

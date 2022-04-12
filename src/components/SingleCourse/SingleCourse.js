@@ -53,7 +53,7 @@ const SingleCourse = () => {
                             <p className={singleCourse['course-p-lessons']}>Duration 24 hours</p>
                             <ul>
                                 {dataTopic ? dataTopic.map((item, index) => (
-                                    <TopicItem course={item} index={index+1} {...item} />
+                                    <TopicItem key={item.id} course={item} index={index+1} {...item} />
                                 )) : null}
                             </ul>
                         </div>
