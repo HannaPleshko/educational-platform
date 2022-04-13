@@ -30,6 +30,7 @@ const NavListLessons = ({ topics }) => {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
+                <div className={lesson['course-title']}>{courseTitle}</div>
                 {topics.map((item, index) => (
                     <Link to={`/course/${courseTitle}/${courseId}/${item.title}/${item.id}`}>
                         <ListItem button key={item.id}>
@@ -43,7 +44,6 @@ const NavListLessons = ({ topics }) => {
 
     return (
         <div className={lesson['wrapper']}>
-            <Button className={lesson['btn-back']} variant="contained"><ArrowBackIosNewIcon color="secondary" /></Button>
             {['left'].map((anchor) => (
                 <React.Fragment key={anchor}>
                     <Button variant="outlined" className={lesson['btn-open']} onClick={toggleDrawer(anchor, true)} >{anchor}</Button>
