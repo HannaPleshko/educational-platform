@@ -1,17 +1,14 @@
-import { Link, useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import header from './css/Header.module.css';
 import NavList from './NavList';
 import { useAuth } from '../../hooks/auth.hook';
 import { Button } from '@mui/material';
 
 const Header = ({ titles }) => {
-  const { token } = useAuth();
+  const navigate = useNavigate();
+  const { token, logout } = useAuth();
   const isAuthenticated = !!token;
-  const auth = useAuth();
-
-  const doLogout = () => {
-    auth.logout();
-  };
 
   return (
     <header className={header['nav-desktop-sticky']}>
@@ -34,11 +31,16 @@ const Header = ({ titles }) => {
             </Link>
           </div>)
           :
-          <Link onClick={doLogout} to={'/'} className={header['nav-links-right']}>
-            <Button variant="outlined" color="primary">
-              Log out
-            </Button>
-          </Link>}
+          <div
+              onClick={() => {
+                  logout();
+                  navigate("/")
+                }}
+                className={header['nav-links-right']}>
+          <Button variant="outlined" color="primary">
+          Log out
+          </Button>
+          </div>}
       </nav>
     </header>
   );

@@ -1,5 +1,3 @@
-import classNames from 'classnames';
-import { Link } from 'react-router-dom';
 import doTask from './css/DoTask.module.css';
 import { Pagination } from '@mui/material';
 
