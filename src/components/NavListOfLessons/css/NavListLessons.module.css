@@ -1,35 +1,18 @@
 @import url(../../../variables/css/color.css);
 @import url(../../../variables/css/size.css);
 
-.nav-container {
-    padding: 21px 14px;
-    /* width: 15%; */
-    /* height: 100vh; */
-    /* background-color: var(--main-blue); */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.btn-back {
+    width: 67px;
+    border-radius: 0;
 }
 
-.nav-container::-webkit-scrollbar {
-    width: 0;
-}
- 
-/* .nav-container h1 {
-    color: var(--white);
-    font-size: var(--fourth_font_size);
-    padding: 10px;
-} */
-
-.topic-container h1 {
-    color: var(--white);
-    font-size: var(--standard_text);
+.btn-open {
+    width: 67px;
+    border-radius: 0;
+    height: 100vh;
 }
 
-.li-lesson {
-    list-style: none;
-}
-
-.li-lesson p {
-    margin-left: 10%;
-    padding: 7px;
-    color: var(--white);
-    font-size: var(--standard_text);
-}
