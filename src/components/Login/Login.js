@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import style from './Login.module.css';
 import { AuthContext } from "../../context/AuthContext"
-import { TextField } from '@material-ui/core';
+import TextField from '@material-ui/core/TextField';
 import { FormControl, Input, InputLabel, InputAdornment, IconButton, Button } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { useLoginMutation } from '../../redux';
@@ -63,8 +63,6 @@ const Login = () => {
                     <div className={style["block-logo-login"]}><h2>Log In</h2></div>
                     <div className={style["block-login"]}>
                         <TextField name='email' onChange={changeForm} type='text' label="Email" />
-
-                        {/* <TextField name='password' onChange={changeForm} type='password' label="Password" /> */}
 
                         <FormControl variant="standard">
                             <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>

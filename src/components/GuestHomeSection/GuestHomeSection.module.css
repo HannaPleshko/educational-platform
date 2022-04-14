@@ -157,7 +157,6 @@
     margin-left: 15px;
 }
 
-/* who is */
 .main-whois {
     position: relative;
     padding: 110px 20px 110px;
@@ -169,7 +168,6 @@
     width: 50%;
     height: 470px;
     background-size: cover;
-    /* margin-right: 7%; */
 }
 
 .container-whois {
@@ -204,7 +202,6 @@
     letter-spacing: -.005em;
 }
 
-/* stages */
 .main-stages {
     position: relative;
     padding: 20px 20px 70px;
@@ -221,7 +218,6 @@
 
 .stages-container-logo {
     display: block;
-    /*margin-bottom: 0;*/
     padding-bottom: 0;
     line-height: 70px;
     color: var(--black);
@@ -238,7 +234,6 @@
     justify-content: center;
 }
 
-/* you will learn */
 .main-learn {
     position: relative;
     padding: 110px 20px 70px;
@@ -310,7 +305,6 @@
     margin: 50px 0 0;
 }
 
-/* why we */
 .main-whywe {
     position: relative;
     padding: 70px 20px 70px
@@ -377,7 +371,6 @@
     width: -webkit-fill-available;
 }
 
-/* reviews */
 .container-reviews {
     position: relative;
     padding: 0 20px 70px
@@ -458,7 +451,6 @@
     padding-bottom: 30px;
 }
 
-/* try free */
 .main-tryfree {
     position: relative;
     padding: 0 20px 70px

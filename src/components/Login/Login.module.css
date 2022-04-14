@@ -27,7 +27,6 @@
 .block-login {
     display: flex;
     flex-direction: column;
-    /*height: 160px;*/
     justify-content: space-between;
 
 }
@@ -37,14 +36,6 @@
     color: var(--black);
     font-size: var(--standard_text);
     font-weight: 400;
-}
-
-.block-login input, .block-pwd input {
-    /* outline: none;
-    border: solid 1px var(--second_gray);
-    border-radius: 10px;
-    height: 44px;
-    width: 100%; */
 }
 
 .block-bottom {
