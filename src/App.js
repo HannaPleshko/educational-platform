@@ -16,8 +16,7 @@ function App() {
         login,
         logout,
         isAuthenticated,
-      }}
-    >
+      }}>
       {routes}
     </AuthContext.Provider>
   );

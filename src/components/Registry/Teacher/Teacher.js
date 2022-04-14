@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import teacher from '../css/Teacher.module.css';
 import { useRegisterMutation } from '../../../redux';
 import Loader from '../../Loader/Loader';
+import TextField from '@material-ui/core/TextField';
+import { FormControl, Input, InputLabel, InputAdornment, IconButton, Button } from '@mui/material';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 
 const Teacher = () => {
     const navigate = useNavigate();
@@ -15,6 +18,14 @@ const Teacher = () => {
         role: 2 // 1 - student, 2 - teacher, 0 - admin
     });
 
+    const [values, setValues] = useState({
+        amount: '',
+        password: '',
+        weight: '',
+        weightRange: '',
+        showPassword: false,
+    });
+
     const changeForm = (event) => {
         setForm({ ...form, [event.target.name]: event.target.value });
     };
@@ -25,28 +36,51 @@ const Teacher = () => {
         return <Loader />;
     }
 
+    const handleChange = (prop) => (event) => {
+        setValues({ ...values, [prop]: event.target.value });
+        setForm({ ...form, [event.target.name]: event.target.value });
+    };
+
+    const handleClickShowPassword = () => {
+        setValues({
+            ...values,
+            showPassword: !values.showPassword,
+        });
+    };
+
+    const handleMouseDownPassword = (event) => {
+        event.preventDefault();
+    };
+
     return (
         <div className={teacher["teacher"]}>
             <div className={teacher["content"]}>
                 <div className={teacher["mycontain"]}>
                     <div className={teacher["block-logo-teacher"]}><h2>Create your HS Teacher account</h2></div>
                     <div className={teacher["block-teacher"]}>
-                        <div className={teacher["block-email"]}>
-                            <p>Name</p>
-                            <input name="name" onChange={changeForm} type='text' />
-                        </div>
-                        <div className={teacher["block-email"]}>
-                            <p>Surname</p>
-                            <input name="surname" onChange={changeForm} type='text' />
-                        </div>
-                        <div className={teacher["block-email"]}>
-                            <p>Email</p>
-                            <input name="email" onChange={changeForm} type='text' />
-                        </div>
-                        <div className={teacher["block-pwd"]}>
-                            <p>Password</p>
-                            <input name="password" onChange={changeForm} type='text' />
-                        </div>
+                        <TextField name='name' onChange={changeForm} type='text' label="Name" />
+                        <TextField name='surname' onChange={changeForm} type='text' label="Surname" />
+                        <TextField name='email' onChange={changeForm} type='text' label="Email" />
+                        <FormControl variant="standard">
+                            <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+                            <Input
+                                name='password'
+                                type={values.showPassword ? 'text' : 'password'}
+                                value={values.password}
+                                onChange={handleChange('password')}
+                                endAdornment={
+                                    <InputAdornment position="end">
+                                        <IconButton
+                                            aria-label="toggle password visibility"
+                                            onClick={handleClickShowPassword}
+                                            onMouseDown={handleMouseDownPassword}
+                                        >
+                                            {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                                        </IconButton>
+                                    </InputAdornment>
+                                }
+                            />
+                        </FormControl>
                     </div>
                     <div className={teacher["block-bottom"]}>
                         <div className={teacher["btn-teacher"]}

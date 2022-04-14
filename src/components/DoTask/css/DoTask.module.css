@@ -1,15 +1,25 @@
 @import url(../../../variables/css/color.css);
+@import url(../../../variables/css/size.css);
 
 .main-content {
     display: flex;
     flex-direction: column;
-    width: 85%;
-    padding: 21px 40px;
+    width: 90%;
+    margin: 20px;
+    word-wrap: break-word;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-content h2 {
     padding: 10px 0;
-    font-size: 22px;
+    font-size: var(--standard_text);
     font-weight: 400;
-    text-align: left;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pagination {
+    margin-left: auto;
+    margin-right: auto;
 }

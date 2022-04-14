@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import header from './css/Header.module.css';
 import NavList from './NavList';
 import { useAuth } from '../../hooks/auth.hook';
+import { Button } from '@mui/material';
 
 const Header = ({ titles }) => {
   const navigate = useNavigate();
@@ -21,22 +22,24 @@ const Header = ({ titles }) => {
         {!isAuthenticated
           ? (<div className={header['nav-links-right']}>
             <Link to={'/login'} className={header['nav-link']}>
-              <div>Login</div>
+              <Button variant="default">Login</Button>
             </Link>
             <Link to={'/register'}>
-              <div className={header['nav-btn']}>
+              <Button variant="outlined" color="primary">
                 Sign up
-              </div>
+              </Button>
             </Link>
           </div>)
-          : <div
-            onClick={() => {
-              logout();
-              navigate("/")
-            }}
-            className={header['nav-link']}
-          >
-            Log out
+          :
+          <div
+              onClick={() => {
+                  logout();
+                  navigate("/")
+                }}
+                className={header['nav-links-right']}>
+          <Button variant="outlined" color="primary">
+          Log out
+          </Button>
           </div>}
       </nav>
     </header>

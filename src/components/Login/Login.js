@@ -1,81 +1,114 @@
-import React, { useState, useContext } from 'react';
-import styles from './Login.module.css';
+import { useState, useContext } from "react";
 import { Link, useNavigate } from 'react-router-dom';
+import style from './Login.module.css';
+import { AuthContext } from "../../context/AuthContext"
+import TextField from '@material-ui/core/TextField';
+import { FormControl, Input, InputLabel, InputAdornment, IconButton, Button } from '@mui/material';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { useLoginMutation } from '../../redux';
 import Loader from '../Loader/Loader';
-import { AuthContext } from '../../context/AuthContext';
 
 const Login = () => {
-  const navigate = useNavigate();
-  const auth = useContext(AuthContext);
+    const navigate = useNavigate();
+    const auth = useContext(AuthContext);
 
-  const [form, setForm] = useState({
-    email: '',
-    password: '',
-  });
+    const [form, setForm] = useState({
+        email: '',
+        password: '',
+    });
 
-  const changeForm = (event) => {
-    setForm({ ...form, [event.target.name]: event.target.value });
-  };
-  const [login, { data, isLoading, isSuccess }] = useLoginMutation();
+    const [values, setValues] = useState({
+        amount: '',
+        password: '',
+        weight: '',
+        weightRange: '',
+        showPassword: false,
+    });
 
-  if (isLoading) {
-    return <Loader />;
-  }
+    const changeForm = (event) => {
+        setForm({ ...form, [event.target.name]: event.target.value });
+    };
 
-  if (isSuccess) {
-    auth.login(data.token);
-  }
+    const [login, { data, isLoading, isSuccess }] = useLoginMutation();
 
-  return (
-    <div className={styles['login']}>
-      <div className={styles['content']}>
-        <div className={styles['mycontain']}>
-          <div className={styles['block-logo-login']}>
-            <h2>Log In</h2>
-          </div>
-          <div className={styles['block-login']}>
-            <div className={styles['block-email']}>
-              <p>Email</p>
-              <input name="email" onChange={changeForm} type="text" />
+    if (isLoading) {
+        return <Loader />;
+    }
+
+    if (isSuccess) {
+        auth.login(data.token);
+    }
+
+
+    const handleChange = (prop) => (event) => {
+        setValues({ ...values, [prop]: event.target.value });
+        setForm({ ...form, [event.target.name]: event.target.value });
+    };
+
+    const handleClickShowPassword = () => {
+        setValues({
+            ...values,
+            showPassword: !values.showPassword,
+        });
+    };
+
+    const handleMouseDownPassword = (event) => {
+        event.preventDefault();
+    };
+
+    return (
+        <div className={style["login"]}>
+            <div className={style["content"]}>
+                <div className={style["mycontain"]}>
+                    <div className={style["block-logo-login"]}><h2>Log In</h2></div>
+                    <div className={style["block-login"]}>
+                        <TextField name='email' onChange={changeForm} type='text' label="Email" />
+
+                        <FormControl variant="standard">
+                            <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+                            <Input
+                                name='password'
+                                type={values.showPassword ? 'text' : 'password'}
+                                value={values.password}
+                                onChange={handleChange('password')}
+                                endAdornment={
+                                    <InputAdornment position="end">
+                                        <IconButton
+                                            aria-label="toggle password visibility"
+                                            onClick={handleClickShowPassword}
+                                            onMouseDown={handleMouseDownPassword}
+                                        >
+                                            {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                                        </IconButton>
+                                    </InputAdornment>
+                                }
+                            />
+                        </FormControl>
+
+                    </div>
+                    <div className={style["block-bottom"]}>
+                        <p className={style["mycontain--login"]}>Forgot password?
+                            <Link to={"*"} className={style["mycontain--login-link"]}><Button>Click Here</Button></Link>
+                        </p>
+
+                        <Button variant="contained"
+                            onClick={async () => {
+                                try {
+                                    const result = await login(form);
+                                    if (result.data) {
+                                        navigate('/course');
+                                    }
+                                } catch (err) {
+                                    console.log(err);
+                                }
+                            }}
+                        >Log In</Button>
+                    </div>
+                    <p className={style["mycontain--reg"]}>Don't have an account?<Link to={"/register"} className={style["mycontain--reg-link"]}><Button>Register</Button></Link>
+                    </p>
+                </div>
             </div>
-            <div className={styles['block-pwd']}>
-              <p>Password</p>
-              <input name="password" onChange={changeForm} type="text" />
-            </div>
-          </div>
-          <div className={styles['block-bottom']}>
-            <p className={styles['mycontain--login']}>
-              Forgot password?
-              <Link to={'*'} className={styles['mycontain--login-link']}>
-                Click Here
-              </Link>
-            </p>
-            <button
-              onClick={async () => {
-                try {
-                  const result = await login(form);
-                  if (result.data) {
-                    navigate('/course');
-                  }
-                } catch (err) {
-                  console.log(err);
-                }
-              }}
-              className={styles['btn-login']}
-            >
-                Log In
-            </button>
-          </div>
-          <p className={styles['mycontain--reg']}>
-            Don't have an account?
-            <Link to={'/register'} className={login['mycontain--reg-link']}>
-              Register
-            </Link>
-          </p>
         </div>
-      </div>
-    </div>
-  );
-};
-export default Login;
+    )
+}
+export default Login

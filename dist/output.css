@@ -1,0 +1,29 @@
+@import url(./variables/css/color.css);
+
+@font-face {
+  font-family: 'Open Sans';
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src: local(''),
+        url('./fonts/open-sans-v26-latin-regular.woff2') format('woff2'),
+        url('./fonts/open-sans-v26-latin-regular.woff2') format('woff');
+}
+
+* {
+  font-family: 'Open sans';
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+  color: var(--black);
+  font-style: normal;
+  font-weight: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

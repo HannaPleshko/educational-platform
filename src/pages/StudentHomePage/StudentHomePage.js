@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import ListOfCourses from '../../components/ListOfCourses/ListOfCourses';
 import Header from '../../components/Header/Header';
 import studentHomePage from './StudentHomePage.module.css';
+import { Button } from '@mui/material';
+
 
 const StudentHomePage = () => {
   let titles = [
@@ -32,19 +34,19 @@ const StudentHomePage = () => {
       <div className={studentHomePage['main-information-navagate']}>
         <div className={studentHomePage['left-nav']}>
           <Link to={'*'}>
-            <p>Now</p>
+            <Button variant="default" >Main</Button>
           </Link>
           <Link to={'*'}>
-            <p>Catalog</p>
+            <Button variant="default" >Catalog</Button>
           </Link>
           <Link to={'*'}>
-            <p>Status</p>
+            <Button variant="default" >Status</Button>
           </Link>
           <Link to={'*'}>
-            <p>Discussions</p>
+            <Button variant="default" >Discussions</Button>
           </Link>
           <Link to={'*'}>
-            <p>Literature</p>
+            <Button variant="default" >Literature</Button>
           </Link>
         </div>
         <div className={studentHomePage['main-information']}>

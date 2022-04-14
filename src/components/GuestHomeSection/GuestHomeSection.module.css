@@ -1,17 +1,13 @@
 @import url(../../variables/css/color.css);
 @import url(../../variables/css/size.css);
 
-.gradient {
-    background-image: linear-gradient(211deg, var(--addl_white), hsla(0, 0%, 100%, 0) 20%);
-}
-
 .main {
     position: relative;
     padding: 125px 20px 100px;
 }
 
 .main_code {
-    background-image: url(./assets/main_code.png);
+    background-image: url(./assets/main_code.gif);
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -92,7 +88,7 @@
     text-align: center;
     display: inline-block;
     padding: 15px 25px;
-    font-size: 20px;
+    font-size: var(--standard_text);
     font-weight: 400;
     letter-spacing: -.005em;
 }
@@ -161,7 +157,6 @@
     margin-left: 15px;
 }
 
-/* who is */
 .main-whois {
     position: relative;
     padding: 110px 20px 110px;
@@ -173,7 +168,6 @@
     width: 50%;
     height: 470px;
     background-size: cover;
-    /* margin-right: 7%; */
 }
 
 .container-whois {
@@ -194,7 +188,7 @@
     padding-bottom: 0;
     line-height: 70px;
     color: var(--black);
-    font-size: 42px;
+    font-size: var(--third_font_size);
     font-weight: 400;
     letter-spacing: -1.5px;
 }
@@ -208,7 +202,6 @@
     letter-spacing: -.005em;
 }
 
-/* stages */
 .main-stages {
     position: relative;
     padding: 20px 20px 70px;
@@ -225,11 +218,10 @@
 
 .stages-container-logo {
     display: block;
-    /*margin-bottom: 0;*/
     padding-bottom: 0;
     line-height: 70px;
     color: var(--black);
-    font-size: var(--second_font_size);
+    font-size: var(--third_font_size);
     font-weight: 400;
     letter-spacing: -1.5px;
     text-align: center;
@@ -242,9 +234,7 @@
     justify-content: center;
 }
 
-/* you will learn */
 .main-learn {
-    background-color: var(--addl_white);
     position: relative;
     padding: 110px 20px 70px;
 }
@@ -285,7 +275,7 @@
     padding-bottom: 0;
     line-height: 70px;
     color: var(--black);
-    font-size: 42px;
+    font-size: var(--third_font_size);
     font-weight: 400;
     letter-spacing: -1.5px;
     text-align: center;
@@ -315,14 +305,13 @@
     margin: 50px 0 0;
 }
 
-/* why we */
 .main-whywe {
     position: relative;
     padding: 70px 20px 70px
 }
 
 .img_whywe {
-    background-image: url(./assets/main_question.png);
+    background-image: url(./assets/main_question.gif);
     background-repeat: no-repeat;
     width: 44%;
     height: 300px;
@@ -382,7 +371,6 @@
     width: -webkit-fill-available;
 }
 
-/* reviews */
 .container-reviews {
     position: relative;
     padding: 0 20px 70px
@@ -463,7 +451,6 @@
     padding-bottom: 30px;
 }
 
-/* try free */
 .main-tryfree {
     position: relative;
     padding: 0 20px 70px

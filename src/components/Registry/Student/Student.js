@@ -1,9 +1,12 @@
 import { Link, useNavigate } from 'react-router-dom';
-import React, { useState } from 'react';
-import axios from 'axios';
+import { useState } from 'react';
 import student from './Student.module.css';
 import { useRegisterMutation } from '../../../redux';
 import Loader from '../../Loader/Loader';
+import TextField from '@material-ui/core/TextField';
+import { FormControl, Input, InputLabel, InputAdornment, IconButton, Button } from '@mui/material';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
+
 
 const Student = () => {
     const navigate = useNavigate();
@@ -16,6 +19,14 @@ const Student = () => {
         role: 1 // 1 - student, 2 - teacher, 0 - admin
     });
 
+    const [values, setValues] = useState({
+        amount: '',
+        password: '',
+        weight: '',
+        weightRange: '',
+        showPassword: false,
+    });
+
     const changeForm = (event) => {
         setForm({ ...form, [event.target.name]: event.target.value });
     };
@@ -26,28 +37,52 @@ const Student = () => {
         return <Loader />;
     }
 
+    const handleChange = (prop) => (event) => {
+        setValues({ ...values, [prop]: event.target.value });
+        setForm({ ...form, [event.target.name]: event.target.value });
+    };
+
+    const handleClickShowPassword = () => {
+        setValues({
+            ...values,
+            showPassword: !values.showPassword,
+        });
+    };
+
+    const handleMouseDownPassword = (event) => {
+        event.preventDefault();
+    };
+
     return (
         <div className={student["student"]}>
             <div className={student["content"]}>
                 <div className={student["mycontain"]}>
                     <div className={student["block-logo-student"]}><h2>Create your HS Student account</h2></div>
                     <div className={student["block-student"]}>
-                        <div className={student["block-email"]}>
-                            <p>Name</p>
-                            <input name="name" onChange={changeForm} type='text' />
-                        </div>
-                        <div className={student["block-email"]}>
-                            <p>Surname</p>
-                            <input name="surname" onChange={changeForm} type='text' />
-                        </div>
-                        <div className={student["block-email"]}>
-                            <p>Email</p>
-                            <input name="email" onChange={changeForm} type='text' />
-                        </div>
-                        <div className={student["block-pwd"]}>
-                            <p>Password</p>
-                            <input name="password" onChange={changeForm} type='text' />
-                        </div>
+                        <TextField name='name' onChange={changeForm} type='text' label="Name" />
+                        <TextField name='surname' onChange={changeForm} type='text' label="Surname" />
+                        <TextField name='email' onChange={changeForm} type='text' label="Email" />
+                        <FormControl variant="standard">
+                            <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+                            <Input
+                                name='password'
+                                type={values.showPassword ? 'text' : 'password'}
+                                value={values.password}
+                                onChange={handleChange('password')}
+                                endAdornment={
+                                    <InputAdornment position="end">
+                                        <IconButton
+                                            aria-label="toggle password visibility"
+                                            onClick={handleClickShowPassword}
+                                            onMouseDown={handleMouseDownPassword}
+                                        >
+                                            {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                                        </IconButton>
+                                    </InputAdornment>
+                                }
+                            />
+                        </FormControl>
+
                     </div>
                     <div className={student["block-bottom"]}>
                         <button
