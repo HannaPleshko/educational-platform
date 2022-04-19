@@ -5,7 +5,6 @@ import './App.css';
 
 function App() {
   const { token, login, logout } = useAuth();
-  console.log(token);
   const isAuthenticated = !!token;
   const routes = RoutesTest(isAuthenticated)
 

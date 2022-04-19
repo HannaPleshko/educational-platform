@@ -8,6 +8,7 @@ import RegistrationTeacherPage from '../pages/RegistrationTeacherPage/Registrati
 import StudentHomePage from '../pages/StudentHomePage/StudentHomePage';
 import SingleCoursePage from '../pages/SingleCoursePage/SingleCoursePage';
 import LessonPage from '../pages/LessonPage/LessonPage';
+import AdminPage from '../pages/AdminPage/AdminPage';
 
 
 export const RoutesTest = (isAuthenticated) => {
@@ -17,6 +18,7 @@ export const RoutesTest = (isAuthenticated) => {
                 <Routes>
                     <Route path="/" element={<GuestHome />}></Route>
                     <Route path="/course" element={<StudentHomePage />}></Route>
+                    <Route path="/admin" element={<AdminPage />}></Route>
                     <Route path="/course/:courseTitle/:courseId" element={<SingleCoursePage />}></Route>
                     <Route path="/course/:courseTitle/:courseId/:topicTitle/:topicId" element={<LessonPage />}></Route>
                     <Route path="*" element={<NotFoundPage />}></Route>
@@ -32,7 +34,6 @@ export const RoutesTest = (isAuthenticated) => {
                 <Route path="/register" element={<RegistrationPage />}></Route>
                 <Route path="/register/student" element={<RegistrationStudentPage />}></Route>
                 <Route path="/register/teacher" element={<RegistrationTeacherPage />}></Route>
-                <Route path="/course/:courseTitle/:courseId" element={<SingleCoursePage />}></Route>
                 <Route path="*" element={<NotFoundPage />}></Route>
             </Routes>
         </>

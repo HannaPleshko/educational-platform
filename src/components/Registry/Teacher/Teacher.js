@@ -52,6 +52,7 @@ const Teacher = () => {
         event.preventDefault();
     };
 
+
     return (
         <div className={teacher["teacher"]}>
             <div className={teacher["content"]}>
@@ -83,7 +84,7 @@ const Teacher = () => {
                         </FormControl>
                     </div>
                     <div className={teacher["block-bottom"]}>
-                        <div className={teacher["btn-teacher"]}
+                        <div
                             onClick={async () => {
                                 try {
                                     const result = await register(form);
@@ -94,7 +95,7 @@ const Teacher = () => {
                                     console.log(err);
                                 }
                             }}>
-                            Next
+                            <Button variant="contained">Next</Button>
                         </div>
                     </div>
                     <p className={teacher["mycontain--log"]}>Already have an account?
