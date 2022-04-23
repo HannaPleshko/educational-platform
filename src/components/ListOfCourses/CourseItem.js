@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import listOfCourses from './css/ListOfCourses.module.css';
 
 const CourseItem = ({ id, title }) => {

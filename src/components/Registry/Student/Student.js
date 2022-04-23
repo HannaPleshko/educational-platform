@@ -7,7 +7,6 @@ import TextField from '@material-ui/core/TextField';
 import { FormControl, Input, InputLabel, InputAdornment, IconButton, Button } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 
-
 const Student = () => {
     const navigate = useNavigate();
 
@@ -82,10 +81,9 @@ const Student = () => {
                                 }
                             />
                         </FormControl>
-
                     </div>
                     <div className={student["block-bottom"]}>
-                        <button
+                        <div
                             onClick={async () => {
                                 try {
                                     const result = await register(form);
@@ -95,11 +93,9 @@ const Student = () => {
                                 } catch (err) {
                                     console.log(err);
                                 }
-                            }}
-                            className={student["btn-student"]}
-                        >
-                            Next
-                        </button>
+                            }} >
+                            <Button variant="contained">Next</Button>
+                        </div>
                     </div>
                     <p className={student["mycontain--log"]}>Already have an account?
                         <Link to={"/login"} className={student["reg-link"]}>Log In</Link>

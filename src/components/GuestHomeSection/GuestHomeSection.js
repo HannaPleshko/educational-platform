@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import main from './GuestHomeSection.module.css';
+import { Button } from '@mui/material';
 
 const GuestHomeSection = () => {
   return (
@@ -15,8 +16,8 @@ const GuestHomeSection = () => {
               <p className={main['hero-description-spacing']}>
                 HS is a programming school where we will teach you the knowledge that is in demand today.
               </p>
-              <Link to={'*'} className={main['btn']}>
-                Get started for free
+              <Link to={'*'}>
+                <Button variant="contained">Get started for free</Button>
               </Link>
             </div>
             <div className={main['flex40col-home-hero']}>
@@ -151,8 +152,8 @@ const GuestHomeSection = () => {
               </div>
             </div>
             <div className={main['learn-container-btn-div']}>
-              <Link to={'*'} className={classNames(main['learn-container-btn'])}>
-                Get started for free
+              <Link to={'*'} >
+                <Button variant="contained">Get started for free</Button>
               </Link>
             </div>
           </div>

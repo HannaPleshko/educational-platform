@@ -69,20 +69,3 @@
     text-align: center;
     margin-bottom: 30px;
 }
-
-.btn-student {
-    min-width: 130px;
-    border-radius: 50px;
-    background-color: var(--dark_blue);
-    transition: all 350ms ease;
-    color: var(--white);
-    text-align: center;
-    display: inline-block;
-    padding: 5px 15px;
-    font-size: var(--standard_text);
-    font-weight: 400;
-}
-
-.btn-student:hover {
-    background-color: var(--second_blue);
-}

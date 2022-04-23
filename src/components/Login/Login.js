@@ -7,9 +7,11 @@ import { FormControl, Input, InputLabel, InputAdornment, IconButton, Button } fr
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { useLoginMutation } from '../../redux';
 import Loader from '../Loader/Loader';
+import jwt_decode from 'jwt-decode';
 
 const Login = () => {
     const navigate = useNavigate();
+
     const auth = useContext(AuthContext);
 
     const [form, setForm] = useState({
@@ -30,6 +32,7 @@ const Login = () => {
     };
 
     const [login, { data, isLoading, isSuccess }] = useLoginMutation();
+    console.log(data);
 
     if (isLoading) {
         return <Loader />;
@@ -38,7 +41,6 @@ const Login = () => {
     if (isSuccess) {
         auth.login(data.token);
     }
-
 
     const handleChange = (prop) => (event) => {
         setValues({ ...values, [prop]: event.target.value });
@@ -54,6 +56,11 @@ const Login = () => {
 
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
+    };
+
+    const decodeToken = (data) => {
+        const {_role} = jwt_decode(data.token);
+        return _role
     };
 
     return (
@@ -96,7 +103,10 @@ const Login = () => {
                                 try {
                                     const result = await login(form);
                                     if (result.data) {
-                                        navigate('/course');
+                                        const role = decodeToken(result.data)
+                                        if (role === 1) navigate('/course')
+                                        else if (role === 1) navigate('/teacher')
+                                        else if (role === 0) navigate('/admin')
                                     }
                                 } catch (err) {
                                     console.log(err);
