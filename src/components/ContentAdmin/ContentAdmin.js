@@ -1,40 +1,26 @@
 import { useEffect } from 'react';
-import ItemUsersAdmin from './ItemUsersAdmin';
 import style from './ContentAdmin.module.css';
+import ItemUsersAdmin from './ItemUsersAdmin';
+import ItemCoursesAdmin from './ItemCoursesAdmin';
+import ItemTopicsAdmin from './ItemTopicsAdmin';
+import ItemLessonAdmin from './ItemLessonAdmin';
 
 const ContentAdmin = ({ currentItem }) => {
-
-
-
-    const changeContent = () => {
-        if (currentItem === 'Users') {
-            return (
-                <ItemUsersAdmin />
-            )
-        } else if (currentItem === 'Courses') {
-            return (
-                <h1>{currentItem}</h1>
-            )
-        } else if (currentItem === 'Topics') {
-            return (
-                <h1>{currentItem}</h1>
-            )
-        } else if (currentItem === 'Lessons') {
-            return (
-                <h1>{currentItem}</h1>
-            )
-        }
+  const changeContent = () => {
+    if (currentItem === 'Users') {
+      return <ItemUsersAdmin />;
+    } else if (currentItem === 'Courses') {
+      return <ItemCoursesAdmin />;
+    } else if (currentItem === 'Topics') {
+      return <ItemTopicsAdmin />;
+    } else if (currentItem === 'Lessons') {
+      return <ItemLessonAdmin />;
     }
+  };
 
-    useEffect(() => {
+  useEffect(() => {}, [currentItem]);
 
-    }, [currentItem])
-
-    return (
-        <div className={style['wrapper-content']}>
-            {changeContent()}
-        </div>
-    );
+  return <div className={style['wrapper-content']}>{changeContent()}</div>;
 };
 
 export default ContentAdmin;

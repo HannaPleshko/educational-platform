@@ -6,24 +6,25 @@ const GuestHome = () => {
   let titles = [
     {
       id: Math.random() * 1000,
-      title: 'Why HS?'
+      title: 'Why HS?',
     },
     {
       id: Math.random() * 1000,
-      title: 'Courses'
+      title: 'Courses',
     },
     {
       id: Math.random() * 1000,
-      title: 'Literature'
+      title: 'Literature',
     },
     {
       id: Math.random() * 1000,
-      title: 'WorkSpace'
+      title: 'WorkSpace',
     },
     {
       id: Math.random() * 1000,
-      title: 'Contacts'
-    }]
+      title: 'Contacts',
+    },
+  ];
 
   return (
     <div>

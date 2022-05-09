@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   const { token, login, logout } = useAuth();
   const isAuthenticated = !!token;
-  const routes = RoutesTest(isAuthenticated)
+  const routes = RoutesTest(isAuthenticated);
 
   return (
     <AuthContext.Provider
@@ -15,7 +15,8 @@ function App() {
         login,
         logout,
         isAuthenticated,
-      }}>
+      }}
+    >
       {routes}
     </AuthContext.Provider>
   );

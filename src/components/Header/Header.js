@@ -17,10 +17,10 @@ const Header = ({ titles }) => {
           <div className={header['nav-logo-link']}></div>
         </Link>
 
-        {(<NavList titles={titles} />)}
+        {<NavList titles={titles} />}
 
-        {!isAuthenticated
-          ? (<div className={header['nav-links-right']}>
+        {!isAuthenticated ? (
+          <div className={header['nav-links-right']}>
             <Link to={'/login'} className={header['nav-link']}>
               <Button variant="default">Login</Button>
             </Link>
@@ -29,18 +29,20 @@ const Header = ({ titles }) => {
                 Sign up
               </Button>
             </Link>
-          </div>)
-          :
+          </div>
+        ) : (
           <div
-              onClick={() => {
-                  logout();
-                  navigate("/")
-                }}
-                className={header['nav-links-right']}>
-          <Button variant="outlined" color="primary">
-          Log out
-          </Button>
-          </div>}
+            onClick={() => {
+              logout();
+              navigate('/');
+            }}
+            className={header['nav-links-right']}
+          >
+            <Button variant="outlined" color="primary">
+              Log out
+            </Button>
+          </div>
+        )}
       </nav>
     </header>
   );

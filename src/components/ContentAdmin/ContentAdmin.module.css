@@ -1,5 +1,29 @@
-.wrapper-content{
+@import url(../../variables/css/color.css);
+@import url(../../variables/css/size.css);
+
+.container {
+    display: flex;
+    /* flex-direction: column; */
+}
+.container p {
+    font-size: var(--standard_text);
+    text-transform: uppercase;
+}
+
+.subcontainer {
+    margin: 30px 40px;
+}
+
+.wrapper-content {
     min-width: 90%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-container button {
+    margin: auto 0 0 30px;
 }

@@ -152,7 +152,7 @@ const GuestHomeSection = () => {
               </div>
             </div>
             <div className={main['learn-container-btn-div']}>
-              <Link to={'*'} >
+              <Link to={'*'}>
                 <Button variant="contained">Get started for free</Button>
               </Link>
             </div>

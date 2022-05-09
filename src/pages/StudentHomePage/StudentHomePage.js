@@ -4,29 +4,29 @@ import Header from '../../components/Header/Header';
 import studentHomePage from './StudentHomePage.module.css';
 import { Button } from '@mui/material';
 
-
 const StudentHomePage = () => {
   let titles = [
     {
       id: Math.random() * 1000,
-      title: 'Why HS?'
+      title: 'Why HS?',
     },
     {
       id: Math.random() * 1000,
-      title: 'Courses'
+      title: 'Courses',
     },
     {
       id: Math.random() * 1000,
-      title: 'Literature'
+      title: 'Literature',
     },
     {
       id: Math.random() * 1000,
-      title: 'WorkSpace'
+      title: 'WorkSpace',
     },
     {
       id: Math.random() * 1000,
-      title: 'Contacts'
-    }]
+      title: 'Contacts',
+    },
+  ];
 
   return (
     <div className={studentHomePage['student-home']}>
@@ -34,19 +34,19 @@ const StudentHomePage = () => {
       <div className={studentHomePage['main-information-navagate']}>
         <div className={studentHomePage['left-nav']}>
           <Link to={'*'}>
-            <Button variant="default" >Main</Button>
+            <Button variant="default">Main</Button>
           </Link>
           <Link to={'*'}>
-            <Button variant="default" >Catalog</Button>
+            <Button variant="default">Catalog</Button>
           </Link>
           <Link to={'*'}>
-            <Button variant="default" >Status</Button>
+            <Button variant="default">Status</Button>
           </Link>
           <Link to={'*'}>
-            <Button variant="default" >Discussions</Button>
+            <Button variant="default">Discussions</Button>
           </Link>
           <Link to={'*'}>
-            <Button variant="default" >Literature</Button>
+            <Button variant="default">Literature</Button>
           </Link>
         </div>
         <div className={studentHomePage['main-information']}>

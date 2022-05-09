@@ -5,10 +5,10 @@ import style from './AdminPage.module.css';
 import Header from '../../components/Header/Header';
 
 const AdminPage = () => {
-  let titles = []
-  const data = ['Users', 'Courses', 'Topics', 'Lessons']
+  let titles = [];
+  const data = ['Users', 'Courses', 'Topics', 'Lessons'];
 
-  const [currentItem, setCurrentItem] = useState('Users')
+  const [currentItem, setCurrentItem] = useState('Users');
 
   return (
     <>
