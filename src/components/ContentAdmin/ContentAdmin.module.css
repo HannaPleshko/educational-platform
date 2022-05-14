@@ -3,7 +3,6 @@
 
 .container {
     display: flex;
-    /* flex-direction: column; */
 }
 .container p {
     font-size: var(--standard_text);

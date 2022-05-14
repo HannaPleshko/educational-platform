@@ -94,6 +94,8 @@ function ItemTopicsAdmin() {
             onClick={async () => {
               try {
                 const result = await deleteTopic(form);
+                console.log(form);
+                console.log(result);
               } catch (err) {
                 console.log(err);
               }
@@ -104,7 +106,7 @@ function ItemTopicsAdmin() {
           </Button>
         </div>
       </div>
-      {isErrorF || isErrorS || isErrorT ? <SimpleSnackbar msg={errorF.data.message || errorS.data.message || errorT.data.message} /> : null}
+      {isErrorF || isErrorS || isErrorT ? <SimpleSnackbar msg={'Not Found'} /> : null}
       {isSuccessF || isSuccessS || isSuccessT ? <SimpleSnackbar msg={'Success'} /> : null}
     </div>
   );

@@ -4,7 +4,7 @@
 .main-content {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 85%;
     margin: 20px;
     word-wrap: break-word;
     margin-left: auto;
@@ -22,4 +22,23 @@
 .pagination {
     margin-left: auto;
     margin-right: auto;
+}
+
+.div-task_code div {
+    min-width: 700px;
+    max-height: 500px;
+}
+
+.button-task_code {
+    margin-left: 40px;
+}
+
+.div-task_code {
+    margin: 30px auto 0;
+    display: flex;
+    width: 700px;
+}
+
+.pagination {
+    margin-top: 15px;
 }

@@ -4,6 +4,7 @@ import { lessonsApi } from './lessonsApi';
 import { coursesApi } from './coursesApi';
 import { topicsApi } from './topicsApi';
 import { authApi } from './authApi';
+import { tasksApi } from './taskApi';
 
 export const store = configureStore({
   reducer: {
@@ -11,9 +12,10 @@ export const store = configureStore({
     [coursesApi.reducerPath]: coursesApi.reducer,
     [topicsApi.reducerPath]: topicsApi.reducer,
     [authApi.reducerPath]: authApi.reducer,
+    [tasksApi.reducerPath]: tasksApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat([lessonsApi.middleware, coursesApi.middleware, topicsApi.middleware, authApi.middleware]),
+    getDefaultMiddleware().concat([lessonsApi.middleware, coursesApi.middleware, topicsApi.middleware, authApi.middleware, tasksApi.middleware]),
 });
 
 setupListeners(store.dispatch);

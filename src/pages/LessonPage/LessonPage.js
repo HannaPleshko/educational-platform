@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import DoTask from '../../components/DoTask/DoTask';
 import NavListLessons from '../../components/NavListOfLessons/NavListLessons';
 import Loader from '../../components/Loader/Loader';
@@ -28,6 +28,8 @@ const LessonPage = () => {
   if (isLoading) {
     return <Loader />;
   }
+
+  console.log(currentLesson);
 
   return (
     <div>

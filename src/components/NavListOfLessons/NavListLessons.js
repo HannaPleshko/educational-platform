@@ -7,7 +7,6 @@ import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 const NavListLessons = ({ topics }) => {
   const { courseTitle, courseId } = useParams();
@@ -32,8 +31,8 @@ const NavListLessons = ({ topics }) => {
       <List>
         <div className={lesson['course-title']}>{courseTitle}</div>
         {topics.map((item, index) => (
-          <Link to={`/course/${courseTitle}/${courseId}/${item.title}/${item.id}`}>
-            <ListItem button key={item.id}>
+          <Link key={item.id} to={`/course/${courseTitle}/${courseId}/${item.title}/${item.id}`}>
+            <ListItem button>
               <ListItemText primary={item.title} />
             </ListItem>
           </Link>

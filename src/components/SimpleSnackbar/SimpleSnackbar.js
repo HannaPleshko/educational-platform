@@ -5,7 +5,6 @@ import CloseIcon from '@mui/icons-material/Close';
 import style from './SimpleSnackbar.module.css';
 
 const SimpleSnackbar = ({ msg }) => {
-  console.log(msg);
   const [open, setOpen] = React.useState(true);
 
   const handleClose = (event, reason) => {
