@@ -1,26 +1,16 @@
-import { useEffect } from 'react';
-import style from './ContentAdmin.module.css';
-import ItemUsersAdmin from './ItemUsersAdmin';
-import ItemCoursesAdmin from './ItemCoursesAdmin';
-import ItemTopicsAdmin from './ItemTopicsAdmin';
-import ItemLessonAdmin from './ItemLessonAdmin';
+import { useGetTasksQuery } from '../../redux';
+import SimpleSnackbar from '../SimpleSnackbar/SimpleSnackbar';
+import style from './ContentTeacher.module.css';
+import ListOfTasksUser from './ListOfTasksUser';
 
-const ContentTeacher = ({ currentItem }) => {
-  const changeContent = () => {
-    if (currentItem === 'Users') {
-      return <ItemUsersAdmin />;
-    } else if (currentItem === 'Courses') {
-      return <ItemCoursesAdmin />;
-    } else if (currentItem === 'Topics') {
-      return <ItemTopicsAdmin />;
-    } else if (currentItem === 'Lessons') {
-      return <ItemLessonAdmin />;
-    }
-  };
+const ContentTeacher = ({ currentId }) => {
+  const { data, isSuccess, isError } = useGetTasksQuery(currentId);
 
-  useEffect(() => {}, [currentItem]);
-
-  return <div className={style['wrapper-content']}>{changeContent()}</div>;
+  return (
+    <div className={style['wrapper-content']}>
+      {isSuccess ? <ListOfTasksUser listOfTasks={data} /> : <SimpleSnackbar msg={'Tasks Not Found'} />}
+    </div>
+  );
 };
 
 export default ContentTeacher;

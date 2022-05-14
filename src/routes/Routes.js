@@ -9,6 +9,7 @@ import StudentHomePage from '../pages/StudentHomePage/StudentHomePage';
 import SingleCoursePage from '../pages/SingleCoursePage/SingleCoursePage';
 import LessonPage from '../pages/LessonPage/LessonPage';
 import AdminPage from '../pages/AdminPage/AdminPage';
+import TeacherPage from '../pages/TeacherPage/TeacherPage';
 
 export const RoutesTest = (isAuthenticated) => {
   if (isAuthenticated) {
@@ -18,6 +19,7 @@ export const RoutesTest = (isAuthenticated) => {
           <Route path="/" element={<GuestHome />}></Route>
           <Route path="/course" element={<StudentHomePage />}></Route>
           <Route path="/admin" element={<AdminPage />}></Route>
+          <Route path="/teacher" element={<TeacherPage />}></Route>
           <Route path="/course/:courseTitle/:courseId" element={<SingleCoursePage />}></Route>
           <Route path="/course/:courseTitle/:courseId/:topicTitle/:topicId" element={<LessonPage />}></Route>
           <Route path="*" element={<NotFoundPage />}></Route>

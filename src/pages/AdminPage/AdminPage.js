@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import NavAdmin from '../../components/NavAdmin/Nav.Admin';
 import ContentAdmin from '../../components/ContentAdmin/ContentAdmin';
 import style from './AdminPage.module.css';

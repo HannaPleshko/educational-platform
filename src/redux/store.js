@@ -15,7 +15,13 @@ export const store = configureStore({
     [tasksApi.reducerPath]: tasksApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat([lessonsApi.middleware, coursesApi.middleware, topicsApi.middleware, authApi.middleware, tasksApi.middleware]),
+    getDefaultMiddleware().concat([
+      lessonsApi.middleware,
+      coursesApi.middleware,
+      topicsApi.middleware,
+      authApi.middleware,
+      tasksApi.middleware,
+    ]),
 });
 
 setupListeners(store.dispatch);

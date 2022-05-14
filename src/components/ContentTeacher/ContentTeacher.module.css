@@ -1,2 +1,17 @@
 @import url(../../variables/css/color.css);
 @import url(../../variables/css/size.css);
+
+.div-task_code div {
+    min-width: 700px;
+    margin-right: 20px;
+}
+
+.div-task_code {
+    margin: 30px auto 0;
+    display: flex;
+    width: 700px;
+}
+
+.div-task_code button {
+    margin-left: 40px;
+}

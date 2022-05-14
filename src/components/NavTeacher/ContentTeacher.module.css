@@ -1,0 +1,12 @@
+@import url(../../variables/css/color.css);
+@import url(../../variables/css/size.css);
+
+.nav-items {
+   max-height: 500px;
+   width: 200px;
+   overflow-y: auto; 
+}
+
+.nav-items h3 {
+   font-size: var(--fourth_font_size);
+}

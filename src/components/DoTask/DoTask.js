@@ -20,7 +20,6 @@ const DoTask = ({ arrLength, currentLesson, paginate }) => {
   });
 
   const [err, setErr] = useState(false);
-  
 
   const changeForm = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
@@ -33,8 +32,8 @@ const DoTask = ({ arrLength, currentLesson, paginate }) => {
   }
 
   const generateForm = () => {
-    form.user_id = jwt_decode(token).id
-    form.lesson_id = currentLesson[0].id
+    form.user_id = jwt_decode(token).id;
+    form.lesson_id = currentLesson[0].id;
   };
 
   return (
@@ -43,23 +42,33 @@ const DoTask = ({ arrLength, currentLesson, paginate }) => {
       <p id={currentLesson[0].id}>{currentLesson[0].content}</p>
       {!currentLesson[0].is_read ? (
         <div className={doTask['div-task_code']}>
-          <div><TextField name="code" onChange={changeForm} id="outlined-multiline-static" label="Your code" multiline rows={4} variant="outlined" /> </div>
+          <div>
+            <TextField
+              name="code"
+              onChange={changeForm}
+              id="outlined-multiline-static"
+              label="Your code"
+              multiline
+              minRows={4}
+              variant="outlined"
+            />{' '}
+          </div>
           <div className={doTask['button-task_code']}>
             <Button
               onClick={async () => {
                 try {
                   if (form.code) {
-                    generateForm()
+                    generateForm();
                     const result = await createTask(form);
                     setForm({
                       id: '',
                       user_id: '',
                       lesson_id: '',
                       code: '',
-                    })
-                    setErr(false)
+                    });
+                    setErr(false);
                   } else {
-                    setErr(true)
+                    setErr(true);
                   }
                 } catch (err) {
                   console.log(err);

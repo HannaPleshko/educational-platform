@@ -6,8 +6,8 @@ export const tasksApi = createApi({
   refetchOnFocus: true,
   endpoints: (builder) => ({
     getTasks: builder.query({
-      query: (url) => ({
-        url: `${url}`,
+      query: (user_id) => ({
+        url: `/task/${user_id}`,
       }),
       transformResponse: (response) => response,
     }),
@@ -20,7 +20,7 @@ export const tasksApi = createApi({
     }),
     updateTask: builder.mutation({
       query: (credentials) => ({
-        url: `/task/${credentials.id}`,
+        url: `/task/upd/${credentials.id}`,
         method: 'POST',
         body: credentials,
       }),
@@ -31,7 +31,14 @@ export const tasksApi = createApi({
         method: 'POST',
       }),
     }),
+    isDoneTask: builder.mutation({
+      query: (credentials) => ({
+        url: `/task/is_done`,
+        method: 'POST',
+        body: credentials,
+      }),
+    }),
   }),
 });
 
-export const { useCreateTaskMutation, useDeleteTaskMutation, useGetTasksQuery, useUpdateTaskMutation} = tasksApi;
+export const { useCreateTaskMutation, useDeleteTaskMutation, useGetTasksQuery, useUpdateTaskMutation, useIsDoneTaskMutation } = tasksApi;
